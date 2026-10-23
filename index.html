@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InkMark — Markdown 编辑器</title>
+  <meta name="description" content="实时所见即所得 Markdown 编辑器，支持 Windows 与 Android。" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="brand-link">
+        <img src="assets/logo.svg" alt="InkMark Logo" class="brand-logo" />
+        <span>InkMark</span>
+        <span class="version-badge" data-role="version-badge">v0.20.18</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#downloads" data-i18n="navDownloads">下载</a>
+        <a href="#preview" data-i18n="navPreview">在线体验</a>
+        <a href="#features" data-i18n="navFeatures">功能</a>
+        <a href="#themes" data-i18n="navThemes">主题</a>
+        <a href="#benchmarks" data-i18n="navBench">性能</a>
+        <a href="#release-notes" data-i18n="navNotes">更新日志</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="lang-toggle-btn" class="icon-btn">EN</button>
+        <button type="button" id="theme-toggle-btn" class="icon-btn">☀️ 浅色</button>
+        <a href="https://github.com/1ATLAS0/InkMark-Release" data-brand-link="repo" target="_blank" rel="noopener" class="icon-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Downloads -->
+    <section id="downloads" class="hero">
+      <div class="container">
+        <h1 class="hero-title">
+          <span data-i18n="heroTitlePrefix">简洁、专注的 </span>
+          <span class="gradient-text" data-i18n="heroTitleHighlight">Markdown 编辑器</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          提供实时所见即所得排版，支持 Windows 桌面端与 Android 移动端。
+        </p>
+
+        <!-- Dual Platform Cards -->
+        <div class="platform-grid">
+          <!-- Windows Card -->
+          <div id="card-windows" class="platform-card recommended">
+            <div class="platform-header">
+              <div class="platform-title-group">
+                <div class="platform-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="platform-name" data-i18n="winCardTitle">Windows</div>
+                  <div class="platform-req" data-i18n="winCardReq">Windows 10 / 11 (x64)</div>
+                </div>
+              </div>
+            </div>
+            <div id="win-artifact-list" class="artifact-list"></div>
+          </div>
+
+          <!-- Android Card -->
+          <div id="card-android" class="platform-card">
+            <div class="platform-header">
+              <div class="platform-title-group">
+                <div class="platform-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 00-8.94 0L5.65 5.67c-.19-.28-.54-.37-.83-.22-.3.16-.42.54-.26.85l1.84 3.18C2.92 11.23.97 14.47 1 18h22c.03-3.53-1.92-6.77-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="platform-name" data-i18n="androidCardTitle">Android</div>
+                  <div class="platform-req" data-i18n="androidCardReq">Android 8.0+</div>
+                </div>
+              </div>
+            </div>
+            <div id="android-artifact-list" class="artifact-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Interactive Preview -->
+    <section id="preview" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="previewTitle">在线体验</h2>
+          <p class="section-desc" data-i18n="previewDesc">点击文档段落可切换 Markdown 源码与渲染视图，通过上方按钮切换平台视图或主题。</p>
+        </div>
+
+        <!-- Mode & Theme Controls -->
+        <div class="showcase-controls-bar">
+          <div class="showcase-mode-group">
+            <button type="button" class="showcase-mode-btn active" data-mock-mode="desktop">
+              💻 <span data-i18n="modeDesktop">桌面端</span>
+            </button>
+            <button type="button" class="showcase-mode-btn" data-mock-mode="android">
+              📱 <span data-i18n="modeAndroid">移动端</span>
+            </button>
+            <button type="button" class="showcase-mode-btn" data-mock-mode="pdf">
+              📄 <span data-i18n="modePdf">PDF 导出</span>
+            </button>
+          </div>
+
+          <div id="mock-theme-picker" class="showcase-theme-picker">
+            <span class="theme-picker-label" data-i18n="themeLabel">主题</span>
+            <button type="button" class="theme-swatch-btn active" data-theme-id="inkmark-dark">
+              <span class="swatch-dot" style="background:#0f141c;border-color:#2dd4bf;"></span>
+              <span>InkMark Dark</span>
+            </button>
+            <button type="button" class="theme-swatch-btn" data-theme-id="github-light">
+              <span class="swatch-dot" style="background:#ffffff;border-color:#0969da;"></span>
+              <span>GitHub Light</span>
+            </button>
+            <button type="button" class="theme-swatch-btn" data-theme-id="one-light">
+              <span class="swatch-dot" style="background:#fafafa;border-color:#4078f2;"></span>
+              <span>One Light</span>
+            </button>
+            <button type="button" class="theme-swatch-btn" data-theme-id="cobalt2">
+              <span class="swatch-dot" style="background:#193549;border-color:#ffc600;"></span>
+              <span>Cobalt2</span>
+            </button>
+            <button type="button" class="theme-swatch-btn" data-theme-id="vesper">
+              <span class="swatch-dot" style="background:#101010;border-color:#ffc799;"></span>
+              <span>Vesper</span>
+            </button>
+            <button type="button" class="theme-swatch-btn" data-theme-id="poimandres">
+              <span class="swatch-dot" style="background:#1b1e28;border-color:#5de4c7;"></span>
+              <span>Poimandres</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Mockup Stage -->
+        <div id="mockup-stage" class="mockup-stage" data-mock-theme="inkmark-dark">
+          <!-- 1. Desktop Mockup -->
+          <div id="mock-view-desktop" class="mock-desktop-window">
+            <div class="mock-menubar">
+              <div class="mock-menu-left">
+                <img src="assets/logo.svg" alt="InkMark" style="width:18px;height:18px;border-radius:4px;" />
+                <span class="mock-menu-item">文件</span>
+                <span class="mock-menu-item">编辑</span>
+                <span class="mock-menu-item">段落</span>
+                <span class="mock-menu-item">格式</span>
+                <span class="mock-menu-item">视图</span>
+                <span class="mock-menu-item">帮助</span>
+              </div>
+              <div class="mock-menu-center">document.md</div>
+              <div class="mock-win-controls">
+                <span class="mock-win-dot"></span>
+                <span class="mock-win-dot"></span>
+                <span class="mock-win-dot" style="background:#ef4444;"></span>
+              </div>
+            </div>
+
+            <div class="mock-desktop-body">
+              <aside class="mock-sidebar">
+                <div class="mock-sidebar-tabs">
+                  <button type="button" class="mock-side-tab active" data-side-panel="toc">大纲</button>
+                  <button type="button" class="mock-side-tab" data-side-panel="recent">最近打开</button>
+                </div>
+
+                <div id="mock-panel-toc" class="mock-toc-list">
+                  <div class="mock-toc-item active" data-target-block="b-title">
+                    <span>1. 所见即所得编辑</span>
+                    <span style="font-size:0.7rem;opacity:0.7;">H1</span>
+                  </div>
+                  <div class="mock-toc-item" data-target-block="b-math" style="padding-left:18px;">
+                    <span>1.1 行内语法与公式</span>
+                    <span style="font-size:0.7rem;opacity:0.7;">H2</span>
+                  </div>
+                  <div class="mock-toc-item" data-target-block="b-mermaid" style="padding-left:18px;">
+                    <span>1.2 流程图渲染</span>
+                    <span style="font-size:0.7rem;opacity:0.7;">H2</span>
+                  </div>
+                  <div class="mock-toc-item" data-target-block="b-table" style="padding-left:18px;">
+                    <span>1.3 表格排版</span>
+                    <span style="font-size:0.7rem;opacity:0.7;">H2</span>
+                  </div>
+                </div>
+
+                <div id="mock-panel-recent" class="mock-recent-list" style="display:none;">
+                  <div class="mock-recent-pills">
+                    <span class="mock-filter-pill active">全部</span>
+                    <span class="mock-filter-pill">文件</span>
+                    <span class="mock-filter-pill">文件夹</span>
+                  </div>
+                  <div class="mock-toc-item">📄 document.md</div>
+                  <div class="mock-toc-item">📄 guide.md</div>
+                  <div class="mock-toc-item">📁 Docs/</div>
+                </div>
+              </aside>
+
+              <div class="mock-editor-pane">
+                <div class="mock-tabbar">
+                  <div class="mock-tab-active">
+                    <span>document.md</span>
+                    <span style="width:7px;height:7px;border-radius:50%;background:var(--m-accent);"></span>
+                  </div>
+                  <span class="mock-hint-pill">点击段落切换源码与预览</span>
+                </div>
+
+                <div class="mock-canvas">
+                  <div class="mock-block" data-block-id="b-title">
+                    <div class="raw-view"><span class="syntax-marker"># </span>所见即所得编辑<span class="mock-cursor"></span></div>
+                    <div class="rendered-view">
+                      <h3 style="font-size:1.45rem;font-weight:800;letter-spacing:-0.02em;">所见即所得编辑</h3>
+                    </div>
+                  </div>
+
+                  <div class="mock-block editing" data-block-id="b-math">
+                    <div class="raw-view">光标进入段落时展开 <span class="syntax-marker">**Markdown 标记**</span> 与公式 <span class="syntax-marker">$</span>E = mc^2<span class="syntax-marker">$</span>，光标移出后自动恢复为渲染视图。<span class="mock-cursor"></span></div>
+                    <div class="rendered-view" style="font-size:0.95rem;">
+                      光标进入段落时展开 <strong>Markdown 标记</strong> 与公式 <span class="mock-math-box">E = mc²</span>，光标移出后自动恢复为渲染视图。
+                    </div>
+                  </div>
+
+                  <div class="mock-block" data-block-id="b-mermaid">
+                    <div class="raw-view"><span class="syntax-marker">```mermaid</span>
+graph LR
+  A[输入 Markdown] --&gt; B(实时排版渲染) --&gt; C[导出 PDF / HTML]
+<span class="syntax-marker">```</span><span class="mock-cursor"></span></div>
+                    <div class="rendered-view">
+                      <div class="mock-mermaid-diagram">
+                        <span class="mermaid-node">输入 Markdown</span>
+                        <span class="mermaid-arrow">──►</span>
+                        <span class="mermaid-node">实时排版渲染</span>
+                        <span class="mermaid-arrow">──►</span>
+                        <span class="mermaid-node">导出 PDF / HTML</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mock-block" data-block-id="b-table">
+                    <div class="raw-view"><span class="syntax-marker">| 功能项 | 编辑区表现 | 导出与性能表现 |</span>
+<span class="syntax-marker">| :--- | :--- | :--- |</span>
+| 大文档加载 | 侧边栏大纲快速定位 | 1 MB 文档约 0.71 秒打开 |
+| 宽表格排版 | 编辑区独立横向滚动 | 导出 PDF 跨页重复表头 |<span class="mock-cursor"></span></div>
+                    <div class="rendered-view">
+                      <div class="mock-wide-table-wrap">
+                        <table class="mock-wide-table">
+                          <thead>
+                            <tr>
+                              <th>功能项</th>
+                              <th>编辑区表现</th>
+                              <th>导出与性能表现</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>大文档加载</strong></td>
+                              <td>侧边栏大纲快速定位</td>
+                              <td style="color:var(--m-accent);font-weight:700;">1 MB 文档约 0.71 秒打开</td>
+                            </tr>
+                            <tr>
+                              <td><strong>宽表格排版</strong></td>
+                              <td>编辑区独立横向滚动</td>
+                              <td>导出 PDF 跨页重复表头</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Android Mobile Mockup -->
+          <div id="mock-view-android" class="mock-android-shell">
+            <div class="mock-android-topbar">
+              <span>←  document.md</span>
+              <span style="font-size:0.75rem;color:var(--m-accent);font-weight:600;">已保存</span>
+            </div>
+            <div class="mock-canvas" style="padding:18px;">
+              <div class="mock-block" data-block-id="m-1">
+                <div class="raw-view"><span class="syntax-marker"># </span>移动端编辑与阅读<span class="mock-cursor"></span></div>
+                <div class="rendered-view">
+                  <h3 style="font-size:1.2rem;font-weight:800;">移动端编辑与阅读</h3>
+                </div>
+              </div>
+              <div class="mock-block editing" data-block-id="m-2">
+                <div class="raw-view">保持与桌面端一致的排版效果，支持 <span class="syntax-marker">**底部快捷工具栏**</span> 与公式 <span class="syntax-marker">$</span>E = mc^2<span class="syntax-marker">$</span> 实时渲染。<span class="mock-cursor"></span></div>
+                <div class="rendered-view" style="font-size:0.9rem;">
+                  保持与桌面端一致的排版效果，支持 <strong>底部快捷工具栏</strong> 与公式 <span class="mock-math-box">E = mc²</span> 实时渲染。
+                </div>
+              </div>
+              <div class="mock-block" data-block-id="m-3">
+                <div class="raw-view"><span class="syntax-marker">- [x] </span>支持本地 Markdown 文件读写
+<span class="syntax-marker">- [x] </span>底部工具栏快速插入常用格式<span class="mock-cursor"></span></div>
+                <div class="rendered-view" style="font-size:0.88rem;">
+                  <div>✅ 支持本地 Markdown 文件读写</div>
+                  <div>✅ 底部工具栏快速插入常用格式</div>
+                </div>
+              </div>
+            </div>
+            <div class="mock-android-toolbar">
+              <span>↶</span>
+              <span><b>B</b></span>
+              <span><i>I</i></span>
+              <span><u>U</u></span>
+              <span>∑</span>
+              <span>⊞</span>
+              <span>≡</span>
+            </div>
+          </div>
+
+          <!-- 3. Multi-Page PDF Export Preview -->
+          <div id="mock-view-pdf" class="mock-pdf-shell">
+            <div class="pdf-page-card">
+              <div class="pdf-page-header">
+                <span>document.pdf</span>
+                <span>第 1 / 2 页</span>
+              </div>
+              <table class="pdf-table">
+                <thead>
+                  <tr>
+                    <th style="width:28%;">功能项</th>
+                    <th style="width:72%;">导出排版表现</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>字号同步</td>
+                    <td>自动继承当前设置的正文与代码块字号</td>
+                  </tr>
+                  <tr>
+                    <td>宽表格缩放</td>
+                    <td>按页面可用宽度自动缩放，单元格长文本自动换行</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pdf-page-card">
+              <div class="pdf-page-header">
+                <span>document.pdf</span>
+                <span>第 2 / 2 页</span>
+              </div>
+              <table class="pdf-table">
+                <thead>
+                  <tr>
+                    <th style="width:28%;">功能项 (续页表头)</th>
+                    <th style="width:72%;">导出排版表现</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>跨页表头</td>
+                    <td>长表格翻页时自动重复顶部表头行</td>
+                  </tr>
+                  <tr>
+                    <td>导出控制</td>
+                    <td>显示导出进度，支持在导出过程中取消操作</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rich Markdown & Capabilities -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="extTitle">扩展语法与排版功能</h2>
+          <p class="section-desc" data-i18n="extDesc">原生支持数学公式、图表、表格、代码块与文档导出，输入即可实时渲染。</p>
+        </div>
+
+        <div class="ext-grid">
+          <!-- Card 1: Math -->
+          <div class="ext-card">
+            <div class="ext-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19V5a2 2 0 0 1 2-2h2M20 5v14a2 2 0 0 1-2 2h-2M8 21H6M16 3h2"/>
+                <path d="M9 12h6M12 9v6"/>
+              </svg>
+            </div>
+            <h3 data-i18n="extMathTitle">数学公式</h3>
+            <p data-i18n="extMathDesc">支持 LaTeX 行内与块级公式实时渲染，准确处理中英文与公式混排间距。</p>
+            <div class="ext-mini">
+              <span style="color:var(--accent-teal);">∇ × E = −∂B / ∂t</span> &nbsp;·&nbsp; ∑<sub>k=1</sub><sup>n</sup> k²
+            </div>
+          </div>
+
+          <!-- Card 2: Diagrams -->
+          <div class="ext-card">
+            <div class="ext-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="6" height="6" rx="1"/>
+                <rect x="15" y="15" width="6" height="6" rx="1"/>
+                <path d="M9 6h6a2 2 0 0 1 2 2v7"/>
+              </svg>
+            </div>
+            <h3 data-i18n="extDiagTitle">图表绘制</h3>
+            <p data-i18n="extDiagDesc">支持通过 Mermaid 语法绘制流程图、时序图与状态图，修改文本即时更新图形。</p>
+            <div class="ext-mini">
+              <div class="ext-mini-flow">
+                <span class="ext-mini-node" data-i18n="extDiagNode1">输入文本</span>
+                <span style="color:var(--text-secondary);">──►</span>
+                <span class="ext-mini-node" data-i18n="extDiagNode2">解析语法</span>
+                <span style="color:var(--text-secondary);">──►</span>
+                <span class="ext-mini-node" data-i18n="extDiagNode3">生成图表</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Tables -->
+          <div class="ext-card">
+            <div class="ext-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+              </svg>
+            </div>
+            <h3 data-i18n="extTableTitle">表格编辑</h3>
+            <p data-i18n="extTableDesc">支持快捷调整行列与对齐方式，可选单元格自动换行或横向滚动。</p>
+            <div class="ext-mini">
+              <div class="ext-mini-tbl">
+                <span class="h" data-i18n="extTblH1">功能</span><span class="h" data-i18n="extTblH2">桌面端</span><span class="h" data-i18n="extTblH3">移动端</span>
+                <span data-i18n="extTblR1">实时渲染</span><span style="color:var(--accent-teal);">✓</span><span style="color:var(--accent-teal);">✓</span>
+                <span data-i18n="extTblR2">横向滚动</span><span style="color:var(--accent-teal);">✓</span><span style="color:var(--accent-teal);">✓</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Code Blocks -->
+          <div class="ext-card">
+            <div class="ext-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 data-i18n="extCodeTitle">代码块</h3>
+            <p data-i18n="extCodeDesc">提供主流编程语言语法高亮、代码一键复制与代码字号独立设置。</p>
+            <div class="ext-mini">
+              <span style="color:var(--text-secondary);">// render.ts</span><br/>
+              <span style="color:var(--accent-teal);">const</span> parse = (md) =&gt; compile(md);
+            </div>
+          </div>
+
+          <!-- Card 5: Focus & Typewriter -->
+          <div class="ext-card">
+            <div class="ext-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <circle cx="12" cy="12" r="9"/>
+              </svg>
+            </div>
+            <h3 data-i18n="extFocusTitle">编辑视图模式</h3>
+            <p data-i18n="extFocusDesc">提供专注模式、打字机模式与源码模式，适应不同写作与校对需求。</p>
+            <div class="ext-mini">
+              <span style="opacity:0.35;" data-i18n="extFocusLine1">非当前编辑段落自动降低对比度</span><br/>
+              <span style="color:var(--accent-teal);font-weight:600;" data-i18n="extFocusLine2">当前编辑行保持高亮与垂直居中</span><br/>
+              <span style="opacity:0.35;" data-i18n="extFocusLine3">支持随时切换至纯文本源码视图</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Export -->
+          <div class="ext-card">
+            <div class="ext-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/>
+              </svg>
+            </div>
+            <h3 data-i18n="extExportTitle">文档导出</h3>
+            <p data-i18n="extExportDesc">支持导出为 PDF 与独立 HTML 文件，保留当前主题样式并支持宽表格跨页排版。</p>
+            <div class="ext-mini">
+              <div class="ext-mini-badges">
+                <span class="ext-mini-badge" style="color:var(--accent-teal);border-color:rgba(45,212,191,0.4);">PDF</span>
+                <span class="ext-mini-badge">HTML</span>
+                <span class="ext-mini-badge">.md</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themes Gallery -->
+    <section id="themes" class="section">
+      <div class="container">
+        <div class="theme-split">
+          <div>
+            <h2 class="section-title" data-i18n="themesTitle">内置主题</h2>
+            <p class="section-desc" data-i18n="themesDesc">
+              包含 39 款浅色与深色主题。点击右侧卡片可在上方编辑器中预览配色效果。
+            </p>
+
+            <div class="theme-feat-list">
+              <div class="theme-feat-item">
+                <div class="ext-icon" style="flex-shrink:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 data-i18n="themeFeat1Title">浅色与深色模式</h4>
+                  <p data-i18n="themeFeat1Desc">提供多种对比度与色调的预设方案，适应不同光线环境下的阅读与编辑。</p>
+                </div>
+              </div>
+
+              <div class="theme-feat-item">
+                <div class="ext-icon" style="flex-shrink:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 data-i18n="themeFeat2Title">实时预览切换</h4>
+                  <p data-i18n="themeFeat2Desc">悬停或点击即可直接切换界面与文档配色，无需重新加载文档。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="swatch-grid">
+              <div class="swatch-card" data-swatch-theme="inkmark-dark">
+                <div class="swatch-pv" style="background:#0f141c;color:#e2e8f0;">
+                  <div class="swatch-pv-tag" style="color:#2dd4bf;">InkMark</div>
+                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                </div>
+                <div class="swatch-meta">
+                  <span>InkMark Dark</span>
+                  <div class="swatch-dots">
+                    <i style="background:#0f141c;border:1px solid #334155;"></i>
+                    <i style="background:#2dd4bf;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-swatch-theme="github-light">
+                <div class="swatch-pv" style="background:#ffffff;color:#1f2328;">
+                  <div class="swatch-pv-tag" style="color:#0969da;">GitHub</div>
+                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                </div>
+                <div class="swatch-meta">
+                  <span>GitHub Light</span>
+                  <div class="swatch-dots">
+                    <i style="background:#ffffff;border:1px solid #cbd5e1;"></i>
+                    <i style="background:#0969da;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-swatch-theme="one-light">
+                <div class="swatch-pv" style="background:#fafafa;color:#383a42;">
+                  <div class="swatch-pv-tag" style="color:#4078f2;">One</div>
+                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                </div>
+                <div class="swatch-meta">
+                  <span>One Light</span>
+                  <div class="swatch-dots">
+                    <i style="background:#fafafa;border:1px solid #cbd5e1;"></i>
+                    <i style="background:#4078f2;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-swatch-theme="cobalt2">
+                <div class="swatch-pv" style="background:#193549;color:#e1efff;">
+                  <div class="swatch-pv-tag" style="color:#ffc600;">Cobalt2</div>
+                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                </div>
+                <div class="swatch-meta">
+                  <span>Cobalt2</span>
+                  <div class="swatch-dots">
+                    <i style="background:#193549;border:1px solid #2d5370;"></i>
+                    <i style="background:#ffc600;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-swatch-theme="vesper">
+                <div class="swatch-pv" style="background:#101010;color:#ececec;">
+                  <div class="swatch-pv-tag" style="color:#ffc799;">Vesper</div>
+                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                </div>
+                <div class="swatch-meta">
+                  <span>Vesper</span>
+                  <div class="swatch-dots">
+                    <i style="background:#101010;border:1px solid #333333;"></i>
+                    <i style="background:#ffc799;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-swatch-theme="poimandres">
+                <div class="swatch-pv" style="background:#1b1e28;color:#e4f0fb;">
+                  <div class="swatch-pv-tag" style="color:#5de4c7;">Poimandres</div>
+                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                </div>
+                <div class="swatch-meta">
+                  <span>Poimandres</span>
+                  <div class="swatch-dots">
+                    <i style="background:#1b1e28;border:1px solid #30364a;"></i>
+                    <i style="background:#5de4c7;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="theme-more-note" data-i18n="themeMoreNote">另含 33 款内置主题</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Performance -->
+    <section id="benchmarks" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="benchTitle">性能数据</h2>
+          <p class="section-desc" data-i18n="benchDesc">基于不同体积复杂 Markdown 文档（含多级标题、表格、代码块与数学公式）的实测耗时。</p>
+        </div>
+
+        <div class="bench-card">
+          <div class="table-scroll">
+            <table class="checksum-table">
+              <thead>
+                <tr>
+                  <th data-i18n="thScaleSize">文档体积</th>
+                  <th data-i18n="thScaleOpen">打开耗时</th>
+                  <th data-i18n="thScaleSwitch">标签切换</th>
+                  <th data-i18n="thScaleInput">输入响应</th>
+                </tr>
+              </thead>
+              <tbody id="scale-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Release Notes -->
+    <section id="release-notes" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="notesTitle">更新日志</h2>
+        </div>
+
+        <div class="changelog-layout">
+          <div id="version-nav" class="version-nav"></div>
+          <div id="changelog-body" class="changelog-content-card"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="assets/logo.svg" alt="InkMark" style="width:24px;height:24px;border-radius:6px;" />
+        <span><strong>InkMark</strong></span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/1ATLAS0/InkMark-Release" data-brand-link="repo" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/1ATLAS0/InkMark-Release/releases" data-brand-link="releases" target="_blank" rel="noopener" data-i18n="footerReleases">历史版本</a>
+        <a href="CHANGELOG.md" data-brand-link="changelog" target="_blank" rel="noopener" data-i18n="footerChangelog">更新日志</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="release-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
