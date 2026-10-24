@@ -1,5 +1,5 @@
 window.__INKMARK_RELEASE_DATA__ = {
-  "generatedAt": "2026-10-24T01:30:48.837Z",
+  "generatedAt": "2026-10-24T01:31:40.646Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -63,7 +63,7 @@ window.__INKMARK_RELEASE_DATA__ = {
         "descEn": "For Android phones and tablets"
       }
     ],
-    "releaseNotesMd": "# InkMark 0.20.22\n\n## 更新与改进\n\n- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。\n- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。\n- **阅读位置更稳**：调整侧栏宽度时保持当前首行位置，减少正文重新换行带来的跳动。\n\n## English\n\n- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.\n- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.\n- **Steadier reading position**: Resizing the sidebar keeps the first visible line in place as the text reflows.\n\n## 下载 / Downloads\n\n- Windows x64 安装版 / installer：`inkmark-win-x64-0.20.22-setup.exe`\n- Windows x64 免安装版 / portable：`inkmark-win-x64-0.20.22.zip`\n- Android 正式版 / release：`InkMark-v0.20.22-android.apk`\n",
+    "releaseNotesMd": "# InkMark 0.20.22\n\n## 更新与改进\n\n- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。\n- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。\n- **保持阅读位置**：调整侧栏宽度时保留当前首行，减少重新排版造成的跳动。\n\n## English\n\n- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.\n- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.\n- **Keep your place**: Resizing the sidebar keeps the first visible line in place as the text reflows.\n\n## 下载 / Downloads\n\n- Windows x64 安装版 / installer：`inkmark-win-x64-0.20.22-setup.exe`\n- Windows x64 免安装版 / portable：`inkmark-win-x64-0.20.22.zip`\n- Android 正式版 / release：`InkMark-v0.20.22-android.apk`\n",
     "sha256SumsRaw": "47518330426ac1a4609ee4b5738b9e7c2ef27519d9a823afc735216e4efaf4ed  inkmark-win-x64-0.20.22-setup.exe\n3b26ff3b37d2add720d87e35e539ec80e67e9a5841d617a9b4452ec18f96da82  inkmark-win-x64-0.20.22.zip\n5f60b61fcd2c196ceae67bb393d3b4411453116e733178cb0bc13e53e914de5e  InkMark-v0.20.22-android.apk"
   },
   "benchmarks": {
@@ -101,9 +101,9 @@ window.__INKMARK_RELEASE_DATA__ = {
       "date": "2026-10-24",
       "platforms": "Windows / Android",
       "heading": "0.20.22 — 2026-10-24 (Windows / Android)",
-      "zh": "- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。\n- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。\n- **阅读位置更稳**：调整侧栏宽度时保持当前首行位置，减少正文重新换行带来的跳动。",
-      "en": "- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.\n- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.\n- **Steadier reading position**: Resizing the sidebar keeps the first visible line in place as the text reflows.",
-      "raw": "### 中文\n\n- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。\n- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。\n- **阅读位置更稳**：调整侧栏宽度时保持当前首行位置，减少正文重新换行带来的跳动。\n\n### English\n\n- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.\n- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.\n- **Steadier reading position**: Resizing the sidebar keeps the first visible line in place as the text reflows."
+      "zh": "- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。\n- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。\n- **保持阅读位置**：调整侧栏宽度时保留当前首行，减少重新排版造成的跳动。",
+      "en": "- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.\n- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.\n- **Keep your place**: Resizing the sidebar keeps the first visible line in place as the text reflows.",
+      "raw": "### 中文\n\n- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。\n- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。\n- **保持阅读位置**：调整侧栏宽度时保留当前首行，减少重新排版造成的跳动。\n\n### English\n\n- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.\n- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.\n- **Keep your place**: Resizing the sidebar keeps the first visible line in place as the text reflows."
     },
     {
       "version": "0.20.21",
