@@ -1,5 +1,21 @@
 # InkMark 更新日志 / Release Notes
 
+## 0.20.22 — 2026-10-24 (Windows / Android)
+
+### 中文
+
+- Windows 与 Android 自动检查新版本，提供下载进度、取消和安装确认。
+- 安装更新前保存当前文档；取消保存会停止安装，保护编辑内容。
+- 大纲长标题可立即横向滚动并查看完整末尾，修复多级标题被截断及拖动侧栏后才出现滚动条的问题。
+- 调整预览区域宽度时保持当前首行的阅读位置，减少重新换行引起的跳动。
+
+### English
+
+- Windows and Android automatically check for updates, with download progress, cancellation and installation confirmation.
+- Documents are saved before installation; cancelling a save stops installation and protects your edits.
+- Long outline headings scroll immediately to their full ending, including nested headings, without resizing the sidebar first.
+- Resizing the preview keeps the current first line in view as text wraps.
+
 ## 0.20.21 — 2026-10-23 (Windows / Android)
 
 ### 中文

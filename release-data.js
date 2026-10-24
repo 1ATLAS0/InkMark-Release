@@ -1,5 +1,5 @@
 window.__INKMARK_RELEASE_DATA__ = {
-  "generatedAt": "2026-10-23T09:05:24.007Z",
+  "generatedAt": "2026-10-24T01:24:49.421Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -9,17 +9,17 @@ window.__INKMARK_RELEASE_DATA__ = {
     "allReleasesApiUrl": "https://api.github.com/repos/1ATLAS0/InkMark-Release/releases"
   },
   "latest": {
-    "version": "0.20.21",
-    "tag": "v0.20.21",
-    "releaseDate": "2026-10-23",
-    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.21",
+    "version": "0.20.22",
+    "tag": "v0.20.22",
+    "releaseDate": "2026-10-24",
+    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.22",
     "assets": [
       {
-        "name": "inkmark-win-x64-0.20.21-setup.exe",
-        "size": 127893404,
-        "sizeFormatted": "121.97 MB",
-        "sha256": "ebc9de443734db8fdbb21595b628268e081181c56d622bd4c6be3664f8f8a99a",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.21/inkmark-win-x64-0.20.21-setup.exe",
+        "name": "inkmark-win-x64-0.20.22-setup.exe",
+        "size": 127715326,
+        "sizeFormatted": "121.80 MB",
+        "sha256": "47518330426ac1a4609ee4b5738b9e7c2ef27519d9a823afc735216e4efaf4ed",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.22/inkmark-win-x64-0.20.22-setup.exe",
         "id": "win-setup",
         "order": 10,
         "platform": "windows",
@@ -31,11 +31,11 @@ window.__INKMARK_RELEASE_DATA__ = {
         "descEn": "Includes file associations and auto-update"
       },
       {
-        "name": "inkmark-win-x64-0.20.21.zip",
-        "size": 176226979,
-        "sizeFormatted": "168.06 MB",
-        "sha256": "ae5c5edb24075e7390d5d7e7ea6cfff3346c24c62bf3c4ff6b7fc2c12384b488",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.21/inkmark-win-x64-0.20.21.zip",
+        "name": "inkmark-win-x64-0.20.22.zip",
+        "size": 176016009,
+        "sizeFormatted": "167.86 MB",
+        "sha256": "3b26ff3b37d2add720d87e35e539ec80e67e9a5841d617a9b4452ec18f96da82",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.22/inkmark-win-x64-0.20.22.zip",
         "id": "win-zip",
         "order": 20,
         "platform": "windows",
@@ -47,11 +47,11 @@ window.__INKMARK_RELEASE_DATA__ = {
         "descEn": "Extract and run anywhere"
       },
       {
-        "name": "InkMark-v0.20.21-android.apk",
-        "size": 8103166,
+        "name": "InkMark-v0.20.22-android.apk",
+        "size": 8106718,
         "sizeFormatted": "7.73 MB",
-        "sha256": "ef4dfae6e5c21f4861afa2089066f1622140a4799e5edfa420577d83df1b787b",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.21/InkMark-v0.20.21-android.apk",
+        "sha256": "5f60b61fcd2c196ceae67bb393d3b4411453116e733178cb0bc13e53e914de5e",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.22/InkMark-v0.20.22-android.apk",
         "id": "android-release",
         "order": 30,
         "platform": "android",
@@ -63,8 +63,8 @@ window.__INKMARK_RELEASE_DATA__ = {
         "descEn": "For Android phones and tablets"
       }
     ],
-    "releaseNotesMd": "# InkMark 0.20.21\n\n## 界面改进\n\n- **更宽的正文区域**：收窄左右页边距，正文默认列宽提升，长文档阅读与编辑更舒展。\n- **大纲更清晰**：每个标题左侧显示 H1/H2 等级，当前标题以主题色标记。\n- **表格预览可选**：宽表格默认自动换行，不再需要横向拖动；可在“设置 → 编辑器 → 表格预览”\n  切换为横向滚动。\n\n## English\n\n- **Wider writing area**: Page margins are narrower and the default text column is wider, giving long\n  documents more room.\n- **Clearer outline**: Each heading shows its H1/H2 level on the left, with the active heading marked\n  in the accent colour.\n- **Table preview options**: Wide tables wrap their cells by default; switch to horizontal scrolling\n  in Settings → Editor → Table preview.\n\n## 下载 / Downloads\n\n- Windows x64 安装版 / installer：`inkmark-win-x64-0.20.21-setup.exe`\n- Windows x64 免安装版 / portable：`inkmark-win-x64-0.20.21.zip`\n- Android 正式版 / release：`InkMark-v0.20.21-android.apk`\n",
-    "sha256SumsRaw": "ebc9de443734db8fdbb21595b628268e081181c56d622bd4c6be3664f8f8a99a  inkmark-win-x64-0.20.21-setup.exe\nae5c5edb24075e7390d5d7e7ea6cfff3346c24c62bf3c4ff6b7fc2c12384b488  inkmark-win-x64-0.20.21.zip\nef4dfae6e5c21f4861afa2089066f1622140a4799e5edfa420577d83df1b787b  InkMark-v0.20.21-android.apk"
+    "releaseNotesMd": "# InkMark v0.20.22\n\n## 中文\n\n- Windows 与 Android 自动检查新版本，支持查看下载进度、取消下载和确认安装。\n- 安装更新前保存文档；取消保存会停止安装，保护当前编辑内容。\n- 修复大纲长标题被截断、滚动条出现延迟和无法滚动到完整末尾的问题，多级标题同样适用。\n- 调整预览区域宽度时保持当前首行的阅读位置，减少重新换行带来的跳动。\n\n## English\n\n- Windows and Android automatically check for updates, with download progress, cancellation and installation confirmation.\n- Documents are saved before installation; cancelling a save stops installation and protects your edits.\n- Fixed clipped outline headings, delayed horizontal scrollbars and unreachable heading endings, including nested headings.\n- Resizing the preview keeps the current first line in view as text wraps.\n",
+    "sha256SumsRaw": "47518330426ac1a4609ee4b5738b9e7c2ef27519d9a823afc735216e4efaf4ed  inkmark-win-x64-0.20.22-setup.exe\n3b26ff3b37d2add720d87e35e539ec80e67e9a5841d617a9b4452ec18f96da82  inkmark-win-x64-0.20.22.zip\n5f60b61fcd2c196ceae67bb393d3b4411453116e733178cb0bc13e53e914de5e  InkMark-v0.20.22-android.apk"
   },
   "benchmarks": {
     "scaleFixtures": [
@@ -95,6 +95,16 @@ window.__INKMARK_RELEASE_DATA__ = {
     ]
   },
   "changelog": [
+    {
+      "version": "0.20.22",
+      "tag": "v0.20.22",
+      "date": "2026-10-24",
+      "platforms": "Windows / Android",
+      "heading": "0.20.22 — 2026-10-24 (Windows / Android)",
+      "zh": "- Windows 与 Android 自动检查新版本，提供下载进度、取消和安装确认。\n- 安装更新前保存当前文档；取消保存会停止安装，保护编辑内容。\n- 大纲长标题可立即横向滚动并查看完整末尾，修复多级标题被截断及拖动侧栏后才出现滚动条的问题。\n- 调整预览区域宽度时保持当前首行的阅读位置，减少重新换行引起的跳动。",
+      "en": "- Windows and Android automatically check for updates, with download progress, cancellation and installation confirmation.\n- Documents are saved before installation; cancelling a save stops installation and protects your edits.\n- Long outline headings scroll immediately to their full ending, including nested headings, without resizing the sidebar first.\n- Resizing the preview keeps the current first line in view as text wraps.",
+      "raw": "### 中文\n\n- Windows 与 Android 自动检查新版本，提供下载进度、取消和安装确认。\n- 安装更新前保存当前文档；取消保存会停止安装，保护编辑内容。\n- 大纲长标题可立即横向滚动并查看完整末尾，修复多级标题被截断及拖动侧栏后才出现滚动条的问题。\n- 调整预览区域宽度时保持当前首行的阅读位置，减少重新换行引起的跳动。\n\n### English\n\n- Windows and Android automatically check for updates, with download progress, cancellation and installation confirmation.\n- Documents are saved before installation; cancelling a save stops installation and protects your edits.\n- Long outline headings scroll immediately to their full ending, including nested headings, without resizing the sidebar first.\n- Resizing the preview keeps the current first line in view as text wraps."
+    },
     {
       "version": "0.20.21",
       "tag": "v0.20.21",
