@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T06:27:57.804Z",
+  "generatedAt": "2026-10-24T06:30:12.312Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -9,62 +9,13 @@
     "allReleasesApiUrl": "https://api.github.com/repos/1ATLAS0/InkMark-Release/releases"
   },
   "latest": {
-    "version": "0.20.22",
-    "tag": "v0.20.22",
+    "version": "0.20.23",
+    "tag": "v0.20.23",
     "releaseDate": "2026-10-24",
-    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.22",
-    "assets": [
-      {
-        "name": "inkmark-win-x64-0.20.22-setup.exe",
-        "size": 127715326,
-        "sizeFormatted": "121.80 MB",
-        "sha256": "47518330426ac1a4609ee4b5738b9e7c2ef27519d9a823afc735216e4efaf4ed",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.22/inkmark-win-x64-0.20.22-setup.exe",
-        "id": "win-setup",
-        "order": 10,
-        "platform": "windows",
-        "kind": "installer",
-        "primary": true,
-        "labelZh": "安装版 (x64)",
-        "labelEn": "Installer (x64)",
-        "descZh": "支持 .md 文件关联与自动更新",
-        "descEn": "Includes file associations and auto-update"
-      },
-      {
-        "name": "inkmark-win-x64-0.20.22.zip",
-        "size": 176016009,
-        "sizeFormatted": "167.86 MB",
-        "sha256": "3b26ff3b37d2add720d87e35e539ec80e67e9a5841d617a9b4452ec18f96da82",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.22/inkmark-win-x64-0.20.22.zip",
-        "id": "win-zip",
-        "order": 20,
-        "platform": "windows",
-        "kind": "portable",
-        "primary": false,
-        "labelZh": "便携版 (.zip)",
-        "labelEn": "Portable (.zip)",
-        "descZh": "解压即用，免安装",
-        "descEn": "Extract and run anywhere"
-      },
-      {
-        "name": "InkMark-v0.20.22-android.apk",
-        "size": 8106718,
-        "sizeFormatted": "7.73 MB",
-        "sha256": "5f60b61fcd2c196ceae67bb393d3b4411453116e733178cb0bc13e53e914de5e",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.22/InkMark-v0.20.22-android.apk",
-        "id": "android-release",
-        "order": 30,
-        "platform": "android",
-        "kind": "apk-release",
-        "primary": true,
-        "labelZh": "正式版 (.apk)",
-        "labelEn": "Official APK (.apk)",
-        "descZh": "适用于 Android 手机与平板",
-        "descEn": "For Android phones and tablets"
-      }
-    ],
-    "releaseNotesMd": "# InkMark 0.20.22\n\n## 功能更新\n\n- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。\n\n## 问题修复\n\n- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。\n- **保持阅读位置**：调整侧栏宽度时保留当前首行，减少重新排版造成的跳动。\n\n## English\n\n### Feature updates\n\n- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.\n\n### Bug fixes\n\n- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.\n- **Keep your place**: Resizing the sidebar keeps the first visible line in place as the text reflows.\n\n## 下载 / Downloads\n\n- Windows x64 安装版 / installer：`inkmark-win-x64-0.20.22-setup.exe`\n- Windows x64 免安装版 / portable：`inkmark-win-x64-0.20.22.zip`\n- Android 正式版 / release：`InkMark-v0.20.22-android.apk`\n",
-    "sha256SumsRaw": "47518330426ac1a4609ee4b5738b9e7c2ef27519d9a823afc735216e4efaf4ed  inkmark-win-x64-0.20.22-setup.exe\n3b26ff3b37d2add720d87e35e539ec80e67e9a5841d617a9b4452ec18f96da82  inkmark-win-x64-0.20.22.zip\n5f60b61fcd2c196ceae67bb393d3b4411453116e733178cb0bc13e53e914de5e  InkMark-v0.20.22-android.apk"
+    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.23",
+    "assets": [],
+    "releaseNotesMd": "# InkMark 0.20.23\n\n## 中文\n\n### 功能更新\n\n- **安装选项**：Windows 安装时可勾选文件关联，默认启用，并记住上次选择。\n\n### 问题修复\n\n- **安装完成后启动**：修复勾选“运行 InkMark”后点击“完成”，安装窗口偶尔长时间无响应的问题。\n- **后台下载更新**：修复下载更新时无法编辑文档的问题，下载完成后也不会打断输入。\n- **检查更新入口**：恢复 Windows“帮助”菜单中的“检查更新”，安装版与便携版均可使用。\n- **中文安装界面**：补全 Windows 安装程序的中文提示，修复中文显示乱码。\n- **缩放阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留当前首行，避免正文跳动。\n\n## English\n\n### Feature updates\n\n- **Installation options**: Windows setup offers a file association checkbox, enabled by default, and remembers your choice.\n\n### Bug fixes\n\n- **Launch after installation**: Fixed setup occasionally becoming unresponsive when finishing with “Run InkMark” selected.\n- **Background update downloads**: Fixed editing being blocked during downloads; completion no longer interrupts typing.\n- **Check for updates**: Restored the Help menu entry in both installed and portable Windows builds.\n- **Chinese setup interface**: Completed Chinese translations in Windows setup and fixed garbled text.\n- **Reading position during zoom**: Ctrl + mouse wheel zoom preserves the first visible line to prevent text from jumping.\n",
+    "sha256SumsRaw": ""
   },
   "benchmarks": {
     "scaleFixtures": [
