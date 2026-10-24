@@ -268,18 +268,13 @@
         }
         continue;
       }
-      if (line.startsWith('### ')) {
+      const heading = /^(#{2,6})\s+(.+)$/.exec(line);
+      if (heading) {
         if (inList) {
           html += '</ul>';
           inList = false;
         }
-        html += `<h4>${formatInline(line.slice(4))}</h4>`;
-      } else if (line.startsWith('## ')) {
-        if (inList) {
-          html += '</ul>';
-          inList = false;
-        }
-        html += `<h4>${formatInline(line.slice(3))}</h4>`;
+        html += `<h4>${formatInline(heading[2])}</h4>`;
       } else if (line.startsWith('- ')) {
         if (!inList) {
           html += '<ul>';

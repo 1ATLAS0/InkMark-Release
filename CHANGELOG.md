@@ -4,13 +4,23 @@
 
 ### 中文
 
+#### 功能更新
+
 - **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。
+
+#### 问题修复
+
 - **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。
 - **保持阅读位置**：调整侧栏宽度时保留当前首行，减少重新排版造成的跳动。
 
 ### English
 
+#### Feature updates
+
 - **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.
+
+#### Bug fixes
+
 - **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.
 - **Keep your place**: Resizing the sidebar keeps the first visible line in place as the text reflows.
 
