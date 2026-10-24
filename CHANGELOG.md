@@ -6,29 +6,25 @@
 
 #### 功能更新
 
-- **安装选项**：Windows 安装时可勾选文件关联，默认启用，并记住上次选择。
+本次无新增功能。
 
 #### 问题修复
 
-- **安装完成后启动**：修复勾选“运行 InkMark”后点击“完成”，安装窗口偶尔长时间无响应的问题。
-- **后台下载更新**：修复下载更新时无法编辑文档的问题，下载完成后也不会打断输入。
-- **检查更新入口**：恢复 Windows“帮助”菜单中的“检查更新”，安装版与便携版均可使用。
-- **中文安装界面**：补全 Windows 安装程序的中文提示，修复中文显示乱码。
-- **缩放阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留当前首行，避免正文跳动。
+- **更新下载**：下载更新期间可继续编辑文档，下载完成后不打断输入。
+- **检查更新**：恢复 Windows“帮助”菜单中的“检查更新”入口，适用于安装版与便携版。
+- **缩放时保持阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留首个可见行，避免内容跳动。
 
 ### English
 
 #### Feature updates
 
-- **Installation options**: Windows setup offers a file association checkbox, enabled by default, and remembers your choice.
+No new features in this release.
 
 #### Bug fixes
 
-- **Launch after installation**: Fixed setup occasionally becoming unresponsive when finishing with “Run InkMark” selected.
-- **Background update downloads**: Fixed editing being blocked during downloads; completion no longer interrupts typing.
-- **Check for updates**: Restored the Help menu entry in both installed and portable Windows builds.
-- **Chinese setup interface**: Completed Chinese translations in Windows setup and fixed garbled text.
-- **Reading position during zoom**: Ctrl + mouse wheel zoom preserves the first visible line to prevent text from jumping.
+- **Update downloads**: Documents remain editable during downloads, and download completion does not interrupt typing.
+- **Check for updates**: Restored the Help menu entry in installed and portable Windows builds.
+- **Reading position when zooming**: Ctrl + mouse wheel zoom keeps the first visible line in place to prevent text from jumping.
 
 ## 0.20.22 — 2026-10-24 (Windows / Android)
 

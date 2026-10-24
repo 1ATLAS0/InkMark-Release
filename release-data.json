@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T06:32:04.538Z",
+  "generatedAt": "2026-10-24T07:04:32.927Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -9,17 +9,17 @@
     "allReleasesApiUrl": "https://api.github.com/repos/1ATLAS0/InkMark-Release/releases"
   },
   "latest": {
-    "version": "0.20.21",
-    "tag": "v0.20.21",
-    "releaseDate": "2026-10-23",
-    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.21",
+    "version": "0.20.23",
+    "tag": "v0.20.23",
+    "releaseDate": "2026-10-24",
+    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.23",
     "assets": [
       {
-        "name": "inkmark-win-x64-0.20.21-setup.exe",
-        "size": 127893404,
-        "sizeFormatted": "121.97 MB",
-        "sha256": "ebc9de443734db8fdbb21595b628268e081181c56d622bd4c6be3664f8f8a99a",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.21/inkmark-win-x64-0.20.21-setup.exe",
+        "name": "inkmark-win-x64-0.20.23-setup.exe",
+        "size": 127699464,
+        "sizeFormatted": "121.78 MB",
+        "sha256": "191d14f1f8da5e9f37610dcd536c1a6c4c7c68bd3ccc57a835716aed32785dd6",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.23/inkmark-win-x64-0.20.23-setup.exe",
         "id": "win-setup",
         "order": 10,
         "platform": "windows",
@@ -31,11 +31,11 @@
         "descEn": "Includes file associations and auto-update"
       },
       {
-        "name": "inkmark-win-x64-0.20.21.zip",
-        "size": 176226979,
-        "sizeFormatted": "168.06 MB",
-        "sha256": "ae5c5edb24075e7390d5d7e7ea6cfff3346c24c62bf3c4ff6b7fc2c12384b488",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.21/inkmark-win-x64-0.20.21.zip",
+        "name": "inkmark-win-x64-0.20.23.zip",
+        "size": 176083734,
+        "sizeFormatted": "167.93 MB",
+        "sha256": "26a39e5dced8270d324c94e5f474afe7d117d1cb72ed599fb273f636c4d7dd0d",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.23/inkmark-win-x64-0.20.23.zip",
         "id": "win-zip",
         "order": 20,
         "platform": "windows",
@@ -47,11 +47,11 @@
         "descEn": "Extract and run anywhere"
       },
       {
-        "name": "InkMark-v0.20.21-android.apk",
-        "size": 8103166,
+        "name": "InkMark-v0.20.23-android.apk",
+        "size": 8106930,
         "sizeFormatted": "7.73 MB",
-        "sha256": "ef4dfae6e5c21f4861afa2089066f1622140a4799e5edfa420577d83df1b787b",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.21/InkMark-v0.20.21-android.apk",
+        "sha256": "77a5be5ca9d08bb38f785ef80bb4e034b6e66bbb22c66937ee1257fa686b4973",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.23/InkMark-v0.20.23-android.apk",
         "id": "android-release",
         "order": 30,
         "platform": "android",
@@ -63,8 +63,8 @@
         "descEn": "For Android phones and tablets"
       }
     ],
-    "releaseNotesMd": "# InkMark 0.20.21\n\n## 界面改进\n\n- **更宽的正文区域**：收窄左右页边距，正文默认列宽提升，长文档阅读与编辑更舒展。\n- **大纲更清晰**：每个标题左侧显示 H1/H2 等级，当前标题以主题色标记。\n- **表格预览可选**：宽表格默认自动换行，不再需要横向拖动；可在“设置 → 编辑器 → 表格预览”\n  切换为横向滚动。\n\n## English\n\n- **Wider writing area**: Page margins are narrower and the default text column is wider, giving long\n  documents more room.\n- **Clearer outline**: Each heading shows its H1/H2 level on the left, with the active heading marked\n  in the accent colour.\n- **Table preview options**: Wide tables wrap their cells by default; switch to horizontal scrolling\n  in Settings → Editor → Table preview.\n\n## 下载 / Downloads\n\n- Windows x64 安装版 / installer：`inkmark-win-x64-0.20.21-setup.exe`\n- Windows x64 免安装版 / portable：`inkmark-win-x64-0.20.21.zip`\n- Android 正式版 / release：`InkMark-v0.20.21-android.apk`\n",
-    "sha256SumsRaw": "ebc9de443734db8fdbb21595b628268e081181c56d622bd4c6be3664f8f8a99a  inkmark-win-x64-0.20.21-setup.exe\nae5c5edb24075e7390d5d7e7ea6cfff3346c24c62bf3c4ff6b7fc2c12384b488  inkmark-win-x64-0.20.21.zip\nef4dfae6e5c21f4861afa2089066f1622140a4799e5edfa420577d83df1b787b  InkMark-v0.20.21-android.apk"
+    "releaseNotesMd": "# InkMark 0.20.23\n\n## 中文\n\n### 功能更新\n\n本次无新增功能。\n\n### 问题修复\n\n- **更新下载**：下载更新期间可继续编辑文档，下载完成后不打断输入。\n- **检查更新**：恢复 Windows“帮助”菜单中的“检查更新”入口，适用于安装版与便携版。\n- **缩放时保持阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留首个可见行，避免内容跳动。\n\n## English\n\n### Feature updates\n\nNo new features in this release.\n\n### Bug fixes\n\n- **Update downloads**: Documents remain editable during downloads, and download completion does not interrupt typing.\n- **Check for updates**: Restored the Help menu entry in installed and portable Windows builds.\n- **Reading position when zooming**: Ctrl + mouse wheel zoom keeps the first visible line in place to prevent text from jumping.\n",
+    "sha256SumsRaw": "191d14f1f8da5e9f37610dcd536c1a6c4c7c68bd3ccc57a835716aed32785dd6  inkmark-win-x64-0.20.23-setup.exe\n26a39e5dced8270d324c94e5f474afe7d117d1cb72ed599fb273f636c4d7dd0d  inkmark-win-x64-0.20.23.zip\n77a5be5ca9d08bb38f785ef80bb4e034b6e66bbb22c66937ee1257fa686b4973  InkMark-v0.20.23-android.apk"
   },
   "benchmarks": {
     "scaleFixtures": [
@@ -101,9 +101,9 @@
       "date": "2026-10-24",
       "platforms": "Windows / Android",
       "heading": "0.20.23 — 2026-10-24 (Windows / Android)",
-      "zh": "#### 功能更新\n\n- **安装选项**：Windows 安装时可勾选文件关联，默认启用，并记住上次选择。\n\n#### 问题修复\n\n- **安装完成后启动**：修复勾选“运行 InkMark”后点击“完成”，安装窗口偶尔长时间无响应的问题。\n- **后台下载更新**：修复下载更新时无法编辑文档的问题，下载完成后也不会打断输入。\n- **检查更新入口**：恢复 Windows“帮助”菜单中的“检查更新”，安装版与便携版均可使用。\n- **中文安装界面**：补全 Windows 安装程序的中文提示，修复中文显示乱码。\n- **缩放阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留当前首行，避免正文跳动。",
-      "en": "#### Feature updates\n\n- **Installation options**: Windows setup offers a file association checkbox, enabled by default, and remembers your choice.\n\n#### Bug fixes\n\n- **Launch after installation**: Fixed setup occasionally becoming unresponsive when finishing with “Run InkMark” selected.\n- **Background update downloads**: Fixed editing being blocked during downloads; completion no longer interrupts typing.\n- **Check for updates**: Restored the Help menu entry in both installed and portable Windows builds.\n- **Chinese setup interface**: Completed Chinese translations in Windows setup and fixed garbled text.\n- **Reading position during zoom**: Ctrl + mouse wheel zoom preserves the first visible line to prevent text from jumping.",
-      "raw": "### 中文\n\n#### 功能更新\n\n- **安装选项**：Windows 安装时可勾选文件关联，默认启用，并记住上次选择。\n\n#### 问题修复\n\n- **安装完成后启动**：修复勾选“运行 InkMark”后点击“完成”，安装窗口偶尔长时间无响应的问题。\n- **后台下载更新**：修复下载更新时无法编辑文档的问题，下载完成后也不会打断输入。\n- **检查更新入口**：恢复 Windows“帮助”菜单中的“检查更新”，安装版与便携版均可使用。\n- **中文安装界面**：补全 Windows 安装程序的中文提示，修复中文显示乱码。\n- **缩放阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留当前首行，避免正文跳动。\n\n### English\n\n#### Feature updates\n\n- **Installation options**: Windows setup offers a file association checkbox, enabled by default, and remembers your choice.\n\n#### Bug fixes\n\n- **Launch after installation**: Fixed setup occasionally becoming unresponsive when finishing with “Run InkMark” selected.\n- **Background update downloads**: Fixed editing being blocked during downloads; completion no longer interrupts typing.\n- **Check for updates**: Restored the Help menu entry in both installed and portable Windows builds.\n- **Chinese setup interface**: Completed Chinese translations in Windows setup and fixed garbled text.\n- **Reading position during zoom**: Ctrl + mouse wheel zoom preserves the first visible line to prevent text from jumping."
+      "zh": "#### 功能更新\n\n本次无新增功能。\n\n#### 问题修复\n\n- **更新下载**：下载更新期间可继续编辑文档，下载完成后不打断输入。\n- **检查更新**：恢复 Windows“帮助”菜单中的“检查更新”入口，适用于安装版与便携版。\n- **缩放时保持阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留首个可见行，避免内容跳动。",
+      "en": "#### Feature updates\n\nNo new features in this release.\n\n#### Bug fixes\n\n- **Update downloads**: Documents remain editable during downloads, and download completion does not interrupt typing.\n- **Check for updates**: Restored the Help menu entry in installed and portable Windows builds.\n- **Reading position when zooming**: Ctrl + mouse wheel zoom keeps the first visible line in place to prevent text from jumping.",
+      "raw": "### 中文\n\n#### 功能更新\n\n本次无新增功能。\n\n#### 问题修复\n\n- **更新下载**：下载更新期间可继续编辑文档，下载完成后不打断输入。\n- **检查更新**：恢复 Windows“帮助”菜单中的“检查更新”入口，适用于安装版与便携版。\n- **缩放时保持阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留首个可见行，避免内容跳动。\n\n### English\n\n#### Feature updates\n\nNo new features in this release.\n\n#### Bug fixes\n\n- **Update downloads**: Documents remain editable during downloads, and download completion does not interrupt typing.\n- **Check for updates**: Restored the Help menu entry in installed and portable Windows builds.\n- **Reading position when zooming**: Ctrl + mouse wheel zoom keeps the first visible line in place to prevent text from jumping."
     },
     {
       "version": "0.20.22",

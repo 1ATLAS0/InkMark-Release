@@ -15,7 +15,7 @@
       <a href="#" class="brand-link">
         <img src="assets/logo.svg" alt="InkMark Logo" class="brand-logo" />
         <span>InkMark</span>
-        <span class="version-badge" data-role="version-badge">v0.20.22</span>
+        <span class="version-badge" data-role="version-badge">v0.20.23</span>
       </a>
 
       <nav class="nav-links">
@@ -50,7 +50,7 @@
         </h1>
 
         <p class="hero-subtitle" data-i18n="heroSubtitle">
-          提供实时所见即所得排版，支持 Windows 桌面端与 Android 移动端。
+          支持所见即所得编辑，适用于 Windows 与 Android。
         </p>
 
         <!-- Dual Platform Cards -->
@@ -84,7 +84,7 @@
                 </div>
                 <div>
                   <div class="platform-name" data-i18n="androidCardTitle">Android</div>
-                  <div class="platform-req" data-i18n="androidCardReq">Android 8.0+</div>
+                  <div class="platform-req" data-i18n="androidCardReq">Android 7.0+</div>
                 </div>
               </div>
             </div>
@@ -603,8 +603,8 @@ graph LR
     <section id="features" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="extTitle">扩展语法与排版功能</h2>
-          <p class="section-desc" data-i18n="extDesc">原生支持数学公式、图表、表格、代码块与文档导出，输入即可实时渲染。</p>
+          <h2 class="section-title" data-i18n="extTitle">语法与排版</h2>
+          <p class="section-desc" data-i18n="extDesc">支持数学公式、图表、表格与代码高亮，可导出 PDF 和 HTML。</p>
         </div>
 
         <div class="ext-grid">
@@ -617,7 +617,7 @@ graph LR
               </svg>
             </div>
             <h3 data-i18n="extMathTitle">数学公式</h3>
-            <p data-i18n="extMathDesc">支持 LaTeX 行内与块级公式实时渲染，准确处理中英文与公式混排间距。</p>
+            <p data-i18n="extMathDesc">支持 LaTeX 行内公式与独立公式块，编辑时实时预览。</p>
             <div class="ext-mini">
               <span style="color:var(--accent-teal);">∇ × E = −∂B / ∂t</span> &nbsp;·&nbsp; ∑<sub>k=1</sub><sup>n</sup> k²
             </div>
@@ -688,11 +688,11 @@ graph LR
                 <circle cx="12" cy="12" r="9"/>
               </svg>
             </div>
-            <h3 data-i18n="extFocusTitle">编辑视图模式</h3>
+            <h3 data-i18n="extFocusTitle">编辑模式</h3>
             <p data-i18n="extFocusDesc">提供专注模式、打字机模式与源码模式，适应不同写作与校对需求。</p>
             <div class="ext-mini">
               <span style="opacity:0.35;" data-i18n="extFocusLine1">非当前编辑段落自动降低对比度</span><br/>
-              <span style="color:var(--accent-teal);font-weight:600;" data-i18n="extFocusLine2">当前编辑行保持高亮与垂直居中</span><br/>
+              <span style="color:var(--accent-teal);font-weight:600;" data-i18n="extFocusLine2">专注模式突出当前段落，打字机模式保持光标居中</span><br/>
               <span style="opacity:0.35;" data-i18n="extFocusLine3">支持随时切换至纯文本源码视图</span>
             </div>
           </div>
@@ -751,7 +751,7 @@ graph LR
                 </div>
                 <div>
                   <h4 data-i18n="themeFeat2Title">实时预览切换</h4>
-                  <p data-i18n="themeFeat2Desc">悬停或点击即可直接切换界面与文档配色，无需重新加载文档。</p>
+                  <p data-i18n="themeFeat2Desc">在上方主题按钮悬停预览，点击主题卡片应用配色。</p>
                 </div>
               </div>
             </div>
@@ -854,7 +854,7 @@ graph LR
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" data-i18n="benchTitle">性能数据</h2>
-          <p class="section-desc" data-i18n="benchDesc">基于不同体积复杂 Markdown 文档（含多级标题、表格、代码块与数学公式）的实测耗时。</p>
+          <p class="section-desc" data-i18n="benchDesc">使用含多级标题、表格、代码块与公式的 Markdown 文档测试，实际耗时因设备与文档内容而异。</p>
         </div>
 
         <div class="bench-card">
