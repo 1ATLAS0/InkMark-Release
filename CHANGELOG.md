@@ -4,17 +4,15 @@
 
 ### 中文
 
-- Windows 与 Android 自动检查新版本，提供下载进度、取消和安装确认。
-- 安装更新前保存当前文档；取消保存会停止安装，保护编辑内容。
-- 大纲长标题可立即横向滚动并查看完整末尾，修复多级标题被截断及拖动侧栏后才出现滚动条的问题。
-- 调整预览区域宽度时保持当前首行的阅读位置，减少重新换行引起的跳动。
+- **应用内更新**：Windows 与 Android 自动检查新版本，可查看下载进度、取消下载，并在确认后安装。
+- **大纲完整滚动**：长标题超出侧栏时即可横向滚动，多级标题也能完整查看。
+- **阅读位置更稳**：调整侧栏宽度时保持当前首行位置，减少正文重新换行带来的跳动。
 
 ### English
 
-- Windows and Android automatically check for updates, with download progress, cancellation and installation confirmation.
-- Documents are saved before installation; cancelling a save stops installation and protects your edits.
-- Long outline headings scroll immediately to their full ending, including nested headings, without resizing the sidebar first.
-- Resizing the preview keeps the current first line in view as text wraps.
+- **In-app updates**: Windows and Android check for new versions automatically, with download progress, cancellation and installation confirmation.
+- **Complete outline headings**: Long and nested headings scroll horizontally as soon as they exceed the sidebar width.
+- **Steadier reading position**: Resizing the sidebar keeps the first visible line in place as the text reflows.
 
 ## 0.20.21 — 2026-10-23 (Windows / Android)
 
