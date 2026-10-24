@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T01:35:21.428Z",
+  "generatedAt": "2026-10-24T06:27:57.804Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -95,6 +95,16 @@
     ]
   },
   "changelog": [
+    {
+      "version": "0.20.23",
+      "tag": "v0.20.23",
+      "date": "2026-10-24",
+      "platforms": "Windows / Android",
+      "heading": "0.20.23 — 2026-10-24 (Windows / Android)",
+      "zh": "#### 功能更新\n\n- **安装选项**：Windows 安装时可勾选文件关联，默认启用，并记住上次选择。\n\n#### 问题修复\n\n- **安装完成后启动**：修复勾选“运行 InkMark”后点击“完成”，安装窗口偶尔长时间无响应的问题。\n- **后台下载更新**：修复下载更新时无法编辑文档的问题，下载完成后也不会打断输入。\n- **检查更新入口**：恢复 Windows“帮助”菜单中的“检查更新”，安装版与便携版均可使用。\n- **中文安装界面**：补全 Windows 安装程序的中文提示，修复中文显示乱码。\n- **缩放阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留当前首行，避免正文跳动。",
+      "en": "#### Feature updates\n\n- **Installation options**: Windows setup offers a file association checkbox, enabled by default, and remembers your choice.\n\n#### Bug fixes\n\n- **Launch after installation**: Fixed setup occasionally becoming unresponsive when finishing with “Run InkMark” selected.\n- **Background update downloads**: Fixed editing being blocked during downloads; completion no longer interrupts typing.\n- **Check for updates**: Restored the Help menu entry in both installed and portable Windows builds.\n- **Chinese setup interface**: Completed Chinese translations in Windows setup and fixed garbled text.\n- **Reading position during zoom**: Ctrl + mouse wheel zoom preserves the first visible line to prevent text from jumping.",
+      "raw": "### 中文\n\n#### 功能更新\n\n- **安装选项**：Windows 安装时可勾选文件关联，默认启用，并记住上次选择。\n\n#### 问题修复\n\n- **安装完成后启动**：修复勾选“运行 InkMark”后点击“完成”，安装窗口偶尔长时间无响应的问题。\n- **后台下载更新**：修复下载更新时无法编辑文档的问题，下载完成后也不会打断输入。\n- **检查更新入口**：恢复 Windows“帮助”菜单中的“检查更新”，安装版与便携版均可使用。\n- **中文安装界面**：补全 Windows 安装程序的中文提示，修复中文显示乱码。\n- **缩放阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留当前首行，避免正文跳动。\n\n### English\n\n#### Feature updates\n\n- **Installation options**: Windows setup offers a file association checkbox, enabled by default, and remembers your choice.\n\n#### Bug fixes\n\n- **Launch after installation**: Fixed setup occasionally becoming unresponsive when finishing with “Run InkMark” selected.\n- **Background update downloads**: Fixed editing being blocked during downloads; completion no longer interrupts typing.\n- **Check for updates**: Restored the Help menu entry in both installed and portable Windows builds.\n- **Chinese setup interface**: Completed Chinese translations in Windows setup and fixed garbled text.\n- **Reading position during zoom**: Ctrl + mouse wheel zoom preserves the first visible line to prevent text from jumping."
+    },
     {
       "version": "0.20.22",
       "tag": "v0.20.22",

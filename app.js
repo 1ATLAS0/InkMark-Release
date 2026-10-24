@@ -40,6 +40,27 @@
       modeAndroid: '移动端',
       modePdf: 'PDF 导出',
       themeLabel: '主题',
+      menuFile: '文件(F)',
+      menuEdit: '编辑(E)',
+      menuParagraph: '段落(P)',
+      menuFormat: '格式(O)',
+      menuWindow: '窗口(W)',
+      menuTheme: '主题(T)',
+      menuHelp: '帮助(H)',
+      sideTocTitle: '目录',
+      tocH1: '系统架构设计',
+      tocH2Math: '核心公式与复杂度',
+      tocH2Diag: '数据同步管线',
+      tocH2Table: '跨平台渲染指标',
+      searchResultInfo: '在 2 个文件中找到 3 处匹配',
+      sideOpenedFiles: '已打开的文件',
+      sideRecent: '最近使用',
+      recentAll: '全部',
+      recentFiles: '文件',
+      recentFolders: '文件夹',
+      recentClear: '清空',
+      editorHintPill: '点击段落展开源码',
+      androidSavedStatus: '已保存 · 128 词',
       extTitle: '扩展语法与排版功能',
       extDesc: '原生支持数学公式、图表、表格、代码块与文档导出，输入即可实时渲染。',
       extMathTitle: '数学公式',
@@ -104,6 +125,27 @@
       modeAndroid: 'Mobile',
       modePdf: 'PDF Export',
       themeLabel: 'Theme',
+      menuFile: 'File',
+      menuEdit: 'Edit',
+      menuParagraph: 'Paragraph',
+      menuFormat: 'Format',
+      menuWindow: 'Window',
+      menuTheme: 'Theme',
+      menuHelp: 'Help',
+      sideTocTitle: 'Table of Contents',
+      tocH1: 'System Architecture',
+      tocH2Math: 'Formulas & Complexity',
+      tocH2Diag: 'Sync Pipeline',
+      tocH2Table: 'Rendering Metrics',
+      searchResultInfo: '3 matches in 2 files',
+      sideOpenedFiles: 'Opened files',
+      sideRecent: 'Recent',
+      recentAll: 'All',
+      recentFiles: 'Files',
+      recentFolders: 'Folders',
+      recentClear: 'Clear',
+      editorHintPill: 'Click paragraph to view source',
+      androidSavedStatus: 'Saved · 128 words',
       extTitle: 'Extended Markdown & Formatting',
       extDesc: 'Built-in support for math equations, diagrams, tables, code blocks, and document export.',
       extMathTitle: 'Math Equations',
@@ -411,20 +453,31 @@
     let lockedMockTheme = 'inkmark-dark';
 
     // Mode switching (Desktop / Android / PDF)
+    function setMockMode(mode) {
+      document.querySelectorAll('.showcase-mode-btn').forEach((b) =>
+        b.classList.toggle('active', b.getAttribute('data-mock-mode') === mode)
+      );
+      const deskEl = document.getElementById('mock-view-desktop');
+      const andEl = document.getElementById('mock-view-android');
+      const pdfEl = document.getElementById('mock-view-pdf');
+      if (deskEl) deskEl.style.display = mode === 'desktop' ? 'block' : 'none';
+      if (andEl) andEl.style.display = mode === 'android' ? 'block' : 'none';
+      if (pdfEl) pdfEl.style.display = mode === 'pdf' ? 'grid' : 'none';
+    }
+
     document.querySelectorAll('.showcase-mode-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         const mode = btn.getAttribute('data-mock-mode');
-        document.querySelectorAll('.showcase-mode-btn').forEach((b) =>
-          b.classList.toggle('active', b === btn)
-        );
-        const deskEl = document.getElementById('mock-view-desktop');
-        const andEl = document.getElementById('mock-view-android');
-        const pdfEl = document.getElementById('mock-view-pdf');
-        if (deskEl) deskEl.style.display = mode === 'desktop' ? 'block' : 'none';
-        if (andEl) andEl.style.display = mode === 'android' ? 'block' : 'none';
-        if (pdfEl) pdfEl.style.display = mode === 'pdf' ? 'grid' : 'none';
+        setMockMode(mode);
       });
     });
+
+    // Default to Mobile online editor when accessed on mobile devices or mobile viewports
+    const isMobileWeb =
+      state.os === 'android' ||
+      /iphone|ipad|ipod|mobile/i.test(navigator.userAgent || '') ||
+      window.innerWidth <= 768;
+    setMockMode(isMobileWeb ? 'android' : 'desktop');
 
     // Theme Hover & Click Preview
     if (themePickerEl && stageEl) {
@@ -475,25 +528,82 @@
       });
     });
 
-    // Sidebar Tabs & TOC Jump
-    document.querySelectorAll('.mock-side-tab').forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const panel = tab.getAttribute('data-side-panel');
-        document.querySelectorAll('.mock-side-tab').forEach((t) =>
-          t.classList.toggle('active', t === tab)
+    // Desktop Left-Column Icon Strip (Matches sideBar/index.vue)
+    const sidebarEl = document.getElementById('mock-sidebar');
+    document.querySelectorAll('.mock-left-icon[data-side-panel]').forEach((iconEl) => {
+      iconEl.addEventListener('click', () => {
+        const panel = iconEl.getAttribute('data-side-panel');
+        const wasActive = iconEl.classList.contains('active');
+
+        if (wasActive && sidebarEl) {
+          sidebarEl.classList.toggle('collapsed');
+          return;
+        }
+
+        if (sidebarEl) sidebarEl.classList.remove('collapsed');
+
+        document.querySelectorAll('.mock-left-icon[data-side-panel]').forEach((el) =>
+          el.classList.toggle('active', el === iconEl)
         );
+
         const tocPanel = document.getElementById('mock-panel-toc');
-        const recPanel = document.getElementById('mock-panel-recent');
+        const searchPanel = document.getElementById('mock-panel-search');
+        const filesPanel = document.getElementById('mock-panel-files');
         if (tocPanel) tocPanel.style.display = panel === 'toc' ? 'flex' : 'none';
-        if (recPanel) recPanel.style.display = panel === 'recent' ? 'flex' : 'none';
+        if (searchPanel) searchPanel.style.display = panel === 'search' ? 'flex' : 'none';
+        if (filesPanel) filesPanel.style.display = panel === 'files' ? 'flex' : 'none';
       });
     });
 
-    document.querySelectorAll('.mock-toc-item[data-target-block]').forEach((item) => {
+    // TOC & Search Jump
+    document
+      .querySelectorAll('.mock-toc-item[data-target-block], .mock-search-hit[data-target-block]')
+      .forEach((item) => {
+        item.addEventListener('click', () => {
+          const targetId = item.getAttribute('data-target-block');
+          const targetBlock = document.querySelector(`.mock-block[data-block-id="${targetId}"]`);
+          if (targetBlock) targetBlock.click();
+        });
+      });
+
+    // Recent List Filter Tabs (Matches recentList.vue: All / Files / Folders)
+    document.querySelectorAll('.mock-recent-tab-btn[data-recent-filter]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-recent-filter');
+        document.querySelectorAll('.mock-recent-tab-btn[data-recent-filter]').forEach((b) =>
+          b.classList.toggle('active', b === btn)
+        );
+        document.querySelectorAll('.mock-recent-item[data-recent-type]').forEach((row) => {
+          const rType = row.getAttribute('data-recent-type');
+          row.style.display = filter === 'all' || filter === rType ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // Mobile Android Outline Sheet Toggle & Jump
+    const androidOutlineBtn = document.getElementById('mock-android-outline-btn');
+    const androidOutlineClose = document.getElementById('mock-android-outline-close');
+    const androidOutlineSheet = document.getElementById('mock-android-outline-sheet');
+    if (androidOutlineBtn && androidOutlineSheet) {
+      androidOutlineBtn.addEventListener('click', () => {
+        const hidden = androidOutlineSheet.style.display === 'none';
+        androidOutlineSheet.style.display = hidden ? 'block' : 'none';
+      });
+    }
+    if (androidOutlineClose && androidOutlineSheet) {
+      androidOutlineClose.addEventListener('click', () => {
+        androidOutlineSheet.style.display = 'none';
+      });
+    }
+    document.querySelectorAll('.mock-android-outline-item[data-mobile-target]').forEach((item) => {
       item.addEventListener('click', () => {
-        const targetId = item.getAttribute('data-target-block');
-        const targetBlock = document.querySelector(`.mock-block[data-block-id="${targetId}"]`);
+        const targetId = item.getAttribute('data-mobile-target');
+        document.querySelectorAll('.mock-android-outline-item').forEach((el) =>
+          el.classList.toggle('active', el === item)
+        );
+        const targetBlock = document.querySelector(`.mock-block[data-mobile-block="${targetId}"]`);
         if (targetBlock) targetBlock.click();
+        if (androidOutlineSheet) androidOutlineSheet.style.display = 'none';
       });
     });
 
