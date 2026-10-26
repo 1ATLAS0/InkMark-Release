@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T07:04:32.927Z",
+  "generatedAt": "2026-10-26T09:28:42.698Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -9,17 +9,17 @@
     "allReleasesApiUrl": "https://api.github.com/repos/1ATLAS0/InkMark-Release/releases"
   },
   "latest": {
-    "version": "0.20.23",
-    "tag": "v0.20.23",
-    "releaseDate": "2026-10-24",
-    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.23",
+    "version": "0.20.24",
+    "tag": "v0.20.24",
+    "releaseDate": "2026-10-26",
+    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v0.20.24",
     "assets": [
       {
-        "name": "inkmark-win-x64-0.20.23-setup.exe",
-        "size": 127699464,
+        "name": "inkmark-win-x64-0.20.24-setup.exe",
+        "size": 127696558,
         "sizeFormatted": "121.78 MB",
-        "sha256": "191d14f1f8da5e9f37610dcd536c1a6c4c7c68bd3ccc57a835716aed32785dd6",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.23/inkmark-win-x64-0.20.23-setup.exe",
+        "sha256": "6e93d8ec0fcf109960313f29d150aaf362ea25a4a2d59dde9cfacca4282fb42b",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.24/inkmark-win-x64-0.20.24-setup.exe",
         "id": "win-setup",
         "order": 10,
         "platform": "windows",
@@ -31,11 +31,11 @@
         "descEn": "Includes file associations and auto-update"
       },
       {
-        "name": "inkmark-win-x64-0.20.23.zip",
-        "size": 176083734,
+        "name": "inkmark-win-x64-0.20.24.zip",
+        "size": 176092407,
         "sizeFormatted": "167.93 MB",
-        "sha256": "26a39e5dced8270d324c94e5f474afe7d117d1cb72ed599fb273f636c4d7dd0d",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.23/inkmark-win-x64-0.20.23.zip",
+        "sha256": "c5c0398a83a87ab8aa6ac6dcc1f3c40095119570e32ff3df4b37d8422ad36228",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.24/inkmark-win-x64-0.20.24.zip",
         "id": "win-zip",
         "order": 20,
         "platform": "windows",
@@ -47,11 +47,11 @@
         "descEn": "Extract and run anywhere"
       },
       {
-        "name": "InkMark-v0.20.23-android.apk",
-        "size": 8106930,
+        "name": "InkMark-v0.20.24-android.apk",
+        "size": 8106990,
         "sizeFormatted": "7.73 MB",
-        "sha256": "77a5be5ca9d08bb38f785ef80bb4e034b6e66bbb22c66937ee1257fa686b4973",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.23/InkMark-v0.20.23-android.apk",
+        "sha256": "5c2bdc0723b5932a45d82099b78169a4c59997d417f2deff30ec3064d96ffa54",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v0.20.24/InkMark-v0.20.24-android.apk",
         "id": "android-release",
         "order": 30,
         "platform": "android",
@@ -63,8 +63,8 @@
         "descEn": "For Android phones and tablets"
       }
     ],
-    "releaseNotesMd": "# InkMark 0.20.23\n\n## 中文\n\n### 功能更新\n\n本次无新增功能。\n\n### 问题修复\n\n- **更新下载**：下载更新期间可继续编辑文档，下载完成后不打断输入。\n- **检查更新**：恢复 Windows“帮助”菜单中的“检查更新”入口，适用于安装版与便携版。\n- **缩放时保持阅读位置**：使用 Ctrl + 鼠标滚轮缩放时保留首个可见行，避免内容跳动。\n\n## English\n\n### Feature updates\n\nNo new features in this release.\n\n### Bug fixes\n\n- **Update downloads**: Documents remain editable during downloads, and download completion does not interrupt typing.\n- **Check for updates**: Restored the Help menu entry in installed and portable Windows builds.\n- **Reading position when zooming**: Ctrl + mouse wheel zoom keeps the first visible line in place to prevent text from jumping.\n",
-    "sha256SumsRaw": "191d14f1f8da5e9f37610dcd536c1a6c4c7c68bd3ccc57a835716aed32785dd6  inkmark-win-x64-0.20.23-setup.exe\n26a39e5dced8270d324c94e5f474afe7d117d1cb72ed599fb273f636c4d7dd0d  inkmark-win-x64-0.20.23.zip\n77a5be5ca9d08bb38f785ef80bb4e034b6e66bbb22c66937ee1257fa686b4973  InkMark-v0.20.23-android.apk"
+    "releaseNotesMd": "# InkMark 0.20.24\n\n### 中文\n\n#### 功能更新\n\n- **界面可读性**：顶部菜单文字与侧栏搜索按钮调整为更易阅读、更易点击的尺寸，搜索按钮支持键盘操作。\n- **搜索空状态**：未打开文件夹时，操作说明与“打开文件夹”按钮合并显示在搜索框下方，不再与“无搜索结果”提示同时出现。\n- **图标风格**：统一侧栏、文件、文件夹及常用操作图标；选中项使用主题色底色，文件夹按展开状态切换图标，并保留文件类型与未保存标记。\n\n#### 问题修复\n\n- **完整主题名称**：悬停或聚焦主题卡片时显示完整名称，长名称不再被截断。\n- **主题对比度**：提高表格边框与侧栏次要文字的对比度，深色主题下的文件路径和表格线条更加清晰。\n\n### English\n\n#### Feature updates\n\n- **Interface readability**: The top menu text and sidebar search button now use easier-to-read and easier-to-click sizes, and the search button supports keyboard operation.\n- **Search empty state**: When no folder is open, guidance and the Open Folder button appear together below the search field, without also showing a \"no results\" message.\n- **Consistent icons**: Unified sidebar, file, folder and common action icons, with theme-colored backgrounds for selections, folder icons that reflect expansion, and preserved file-type and unsaved indicators.\n\n#### Bug fixes\n\n- **Full theme names**: Hovering over or focusing a theme card shows its full name instead of a truncated label.\n- **Theme contrast**: Table borders and secondary sidebar text have higher contrast, making file paths and table lines clearer in dark themes.\n\n## 下载说明 / Downloads\n\n- **Windows 桌面端 (x64)**：提供安装版 (`inkmark-win-x64-0.20.24-setup.exe`) 与免安装便携版 (`inkmark-win-x64-0.20.24.zip`)。\n- **Android 移动端**：提供正式版安装包 (`InkMark-v0.20.24-android.apk`)。\n",
+    "sha256SumsRaw": "6e93d8ec0fcf109960313f29d150aaf362ea25a4a2d59dde9cfacca4282fb42b  inkmark-win-x64-0.20.24-setup.exe\nc5c0398a83a87ab8aa6ac6dcc1f3c40095119570e32ff3df4b37d8422ad36228  inkmark-win-x64-0.20.24.zip\n5c2bdc0723b5932a45d82099b78169a4c59997d417f2deff30ec3064d96ffa54  InkMark-v0.20.24-android.apk"
   },
   "benchmarks": {
     "scaleFixtures": [
@@ -95,6 +95,16 @@
     ]
   },
   "changelog": [
+    {
+      "version": "0.20.24",
+      "tag": "v0.20.24",
+      "date": "2026-10-26",
+      "platforms": "Windows / Android",
+      "heading": "0.20.24 — 2026-10-26 (Windows / Android)",
+      "zh": "#### 功能更新\n\n- **界面可读性**：顶部菜单文字与侧栏搜索按钮调整为更易阅读、更易点击的尺寸，搜索按钮支持键盘操作。\n- **搜索空状态**：未打开文件夹时，操作说明与“打开文件夹”按钮合并显示在搜索框下方，不再与“无搜索结果”提示同时出现。\n- **图标风格**：统一侧栏、文件、文件夹及常用操作图标；选中项使用主题色底色，文件夹按展开状态切换图标，并保留文件类型与未保存标记。\n\n#### 问题修复\n\n- **完整主题名称**：悬停或聚焦主题卡片时显示完整名称，长名称不再被截断。\n- **主题对比度**：提高表格边框与侧栏次要文字的对比度，深色主题下的文件路径和表格线条更加清晰。",
+      "en": "#### Feature updates\n\n- **Interface readability**: The top menu text and sidebar search button now use easier-to-read and easier-to-click sizes, and the search button supports keyboard operation.\n- **Search empty state**: When no folder is open, guidance and the Open Folder button appear together below the search field, without also showing a \"no results\" message.\n- **Consistent icons**: Unified sidebar, file, folder and common action icons, with theme-colored backgrounds for selections, folder icons that reflect expansion, and preserved file-type and unsaved indicators.\n\n#### Bug fixes\n\n- **Full theme names**: Hovering over or focusing a theme card shows its full name instead of a truncated label.\n- **Theme contrast**: Table borders and secondary sidebar text have higher contrast, making file paths and table lines clearer in dark themes.",
+      "raw": "### 中文\n\n#### 功能更新\n\n- **界面可读性**：顶部菜单文字与侧栏搜索按钮调整为更易阅读、更易点击的尺寸，搜索按钮支持键盘操作。\n- **搜索空状态**：未打开文件夹时，操作说明与“打开文件夹”按钮合并显示在搜索框下方，不再与“无搜索结果”提示同时出现。\n- **图标风格**：统一侧栏、文件、文件夹及常用操作图标；选中项使用主题色底色，文件夹按展开状态切换图标，并保留文件类型与未保存标记。\n\n#### 问题修复\n\n- **完整主题名称**：悬停或聚焦主题卡片时显示完整名称，长名称不再被截断。\n- **主题对比度**：提高表格边框与侧栏次要文字的对比度，深色主题下的文件路径和表格线条更加清晰。\n\n### English\n\n#### Feature updates\n\n- **Interface readability**: The top menu text and sidebar search button now use easier-to-read and easier-to-click sizes, and the search button supports keyboard operation.\n- **Search empty state**: When no folder is open, guidance and the Open Folder button appear together below the search field, without also showing a \"no results\" message.\n- **Consistent icons**: Unified sidebar, file, folder and common action icons, with theme-colored backgrounds for selections, folder icons that reflect expansion, and preserved file-type and unsaved indicators.\n\n#### Bug fixes\n\n- **Full theme names**: Hovering over or focusing a theme card shows its full name instead of a truncated label.\n- **Theme contrast**: Table borders and secondary sidebar text have higher contrast, making file paths and table lines clearer in dark themes."
+    },
     {
       "version": "0.20.23",
       "tag": "v0.20.23",

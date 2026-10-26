@@ -1,5 +1,33 @@
 # InkMark 更新日志 / Release Notes
 
+## 0.20.24 — 2026-10-26 (Windows / Android)
+
+### 中文
+
+#### 功能更新
+
+- **界面可读性**：顶部菜单文字与侧栏搜索按钮调整为更易阅读、更易点击的尺寸，搜索按钮支持键盘操作。
+- **搜索空状态**：未打开文件夹时，操作说明与“打开文件夹”按钮合并显示在搜索框下方，不再与“无搜索结果”提示同时出现。
+- **图标风格**：统一侧栏、文件、文件夹及常用操作图标；选中项使用主题色底色，文件夹按展开状态切换图标，并保留文件类型与未保存标记。
+
+#### 问题修复
+
+- **完整主题名称**：悬停或聚焦主题卡片时显示完整名称，长名称不再被截断。
+- **主题对比度**：提高表格边框与侧栏次要文字的对比度，深色主题下的文件路径和表格线条更加清晰。
+
+### English
+
+#### Feature updates
+
+- **Interface readability**: The top menu text and sidebar search button now use easier-to-read and easier-to-click sizes, and the search button supports keyboard operation.
+- **Search empty state**: When no folder is open, guidance and the Open Folder button appear together below the search field, without also showing a "no results" message.
+- **Consistent icons**: Unified sidebar, file, folder and common action icons, with theme-colored backgrounds for selections, folder icons that reflect expansion, and preserved file-type and unsaved indicators.
+
+#### Bug fixes
+
+- **Full theme names**: Hovering over or focusing a theme card shows its full name instead of a truncated label.
+- **Theme contrast**: Table borders and secondary sidebar text have higher contrast, making file paths and table lines clearer in dark themes.
+
 ## 0.20.23 — 2026-10-24 (Windows / Android)
 
 ### 中文
