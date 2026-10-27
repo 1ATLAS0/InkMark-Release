@@ -27,7 +27,7 @@
       navNotes: '更新日志',
       heroTitlePrefix: '简洁、专注的 ',
       heroTitleHighlight: 'Markdown 编辑器',
-      heroSubtitle: '支持所见即所得编辑，适用于 Windows 与 Android。',
+      heroSubtitle: '面向 Windows 与 Android，专注于文档处理性能与日常编辑体验。',
       winCardTitle: 'Windows',
       winCardReq: 'Windows 10 / 11 (x64)',
       androidCardTitle: 'Android',
@@ -100,7 +100,6 @@
       thScaleSwitch: '标签切换',
       thScaleInput: '输入响应',
       notesTitle: '更新日志',
-      footerReleases: '历史版本',
       footerChangelog: '更新日志'
     },
     en: {
@@ -109,10 +108,10 @@
       navFeatures: 'Features',
       navThemes: 'Themes',
       navBench: 'Performance',
-      navNotes: 'Changelog',
+      navNotes: 'Release notes',
       heroTitlePrefix: 'Clean, Focused ',
       heroTitleHighlight: 'Markdown Editor',
-      heroSubtitle: 'Real-time WYSIWYG Markdown editing for Windows and Android.',
+      heroSubtitle: 'A Markdown editor for Windows and Android, focused on performance and ease of use.',
       winCardTitle: 'Windows',
       winCardReq: 'Windows 10 / 11 (x64)',
       androidCardTitle: 'Android',
@@ -184,9 +183,8 @@
       thScaleOpen: 'Open Time',
       thScaleSwitch: 'Tab Switch',
       thScaleInput: 'Input Latency',
-      notesTitle: 'Changelog',
-      footerReleases: 'Releases',
-      footerChangelog: 'Changelog'
+      notesTitle: 'Release notes',
+      footerChangelog: 'Release notes'
     }
   };
 
