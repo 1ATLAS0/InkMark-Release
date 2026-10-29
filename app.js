@@ -59,19 +59,24 @@
       navNotes: '更新日志',
       heroTitlePrefix: '简洁、专注的 ',
       heroTitleHighlight: 'Markdown 编辑器',
-      heroSubtitle: '面向 Windows 与 Android，专注于文档处理性能与日常编辑体验。',
+      heroSubtitle: '面向桌面与移动端，专注于文档处理性能与日常编辑体验。',
       winCardTitle: 'Windows',
       winCardReq: 'Windows 10 / 11 (x64)',
+      winBadge: '推荐',
       androidCardTitle: 'Android',
       androidCardReq: 'Android 7.0+',
+      androidBadge: '移动双栏',
+      androidFeatTitle: '折叠屏与平板',
+      androidFeatBadge: '📱 深度适配',
+      androidFeatDesc: '针对大屏双栏排版、触控手势与软键盘优化',
       linuxCardTitle: 'Linux',
       linuxCardReq: 'x64 / ARM64 (主流发行版)',
       comingSoonBadge: '即将推出',
       comingSoonBtn: '即将推出',
       linuxPkgUniversal: '通用包 (.AppImage)',
-      linuxPkgUniversalDesc: '适用于 Ubuntu、Fedora、Arch 等主流发行版，免安装即开即用。',
+      linuxPkgUniversalDesc: '主流 Linux 发行版免安装即开即用（Ubuntu / Fedora / Arch）',
       linuxPkgDeb: '安装包 (.deb)',
-      linuxPkgDebDesc: '适用于 Debian、Ubuntu 及衍生版，支持系统包管理器与桌面集成。',
+      linuxPkgDebDesc: 'Debian / Ubuntu 原生系统软件包，集成桌面启动器',
       recommendedBadge: '推荐',
       downloadBtn: '下载',
       previewTitle: '在线体验',
@@ -173,19 +178,24 @@
       navNotes: 'Release notes',
       heroTitlePrefix: 'Clean, Focused ',
       heroTitleHighlight: 'Markdown Editor',
-      heroSubtitle: 'A Markdown editor for Windows and Android, focused on performance and ease of use.',
+      heroSubtitle: 'A high-performance Markdown editor for desktop and mobile, built for speed and focus.',
       winCardTitle: 'Windows',
       winCardReq: 'Windows 10 / 11 (x64)',
+      winBadge: 'Recommended',
       androidCardTitle: 'Android',
       androidCardReq: 'Android 7.0+',
+      androidBadge: 'Touch & Tablet',
+      androidFeatTitle: 'Foldables & Tablets',
+      androidFeatBadge: '📱 Optimized',
+      androidFeatDesc: 'Dual-pane reading, touch gestures, and virtual keyboard ergonomics',
       linuxCardTitle: 'Linux',
       linuxCardReq: 'x64 / ARM64 (Major Distros)',
       comingSoonBadge: 'Coming Soon',
       comingSoonBtn: 'Coming Soon',
       linuxPkgUniversal: 'Universal (.AppImage)',
-      linuxPkgUniversalDesc: 'Universal standalone bundle for Ubuntu, Fedora, Arch, etc.',
+      linuxPkgUniversalDesc: 'Standalone bundle for Ubuntu, Fedora, Arch, and major distros',
       linuxPkgDeb: 'Package (.deb)',
-      linuxPkgDebDesc: 'Native package for Debian, Ubuntu, and derivatives.',
+      linuxPkgDebDesc: 'Native deb package with desktop launcher integration',
       recommendedBadge: 'Recommended',
       downloadBtn: 'Download',
       previewTitle: 'Interactive Demo',
@@ -904,8 +914,8 @@
   function formatBytes(bytes) {
     if (!Number.isFinite(bytes) || bytes <= 0) return '—';
     if (bytes < 1024) return `${bytes} B`;
-    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-    return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
   }
 
   function renderPlatformCards() {
@@ -939,7 +949,6 @@
         <div class="artifact-top">
           <div class="artifact-label">
             <span>${label}</span>
-            ${asset.primary ? `<span class="artifact-badge">${t('recommendedBadge')}</span>` : ''}
           </div>
           <div class="artifact-actions">
             <a class="btn-dl-sm ${btnVariant}" href="${asset.downloadUrl}" target="_blank" rel="noopener">
@@ -952,6 +961,23 @@
 
       container.appendChild(item);
     });
+
+    if (containerId === 'android-artifact-list') {
+      const featItem = document.createElement('div');
+      featItem.className = 'artifact-item is-feature';
+      featItem.innerHTML = `
+        <div class="artifact-top">
+          <div class="artifact-label">
+            <span>${t('androidFeatTitle')}</span>
+          </div>
+          <div class="artifact-actions">
+            <span class="btn-dl-sm feat-pill">${t('androidFeatBadge')}</span>
+          </div>
+        </div>
+        <div class="artifact-desc">${t('androidFeatDesc')}</div>
+      `;
+      container.appendChild(featItem);
+    }
   }
 
   function renderBenchmarks() {
