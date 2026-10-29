@@ -260,6 +260,12 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+.platform-title-group > div:last-child {
+  min-width: 0;
 }
 
 .platform-icon {
@@ -283,6 +289,12 @@ a {
 
 .platform-req {
   font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
   color: var(--text-secondary);
   margin-top: 2px;
 }
