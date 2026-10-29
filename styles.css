@@ -295,9 +295,6 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-  color: var(--text-secondary);
-  margin-top: 2px;
-}
 
 .platform-header-badge {
   display: inline-flex;
