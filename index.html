@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InkMark — Markdown 编辑器</title>
   <meta name="description" content="InkMark 是一款面向 Windows 与 Android 的 Markdown 编辑器，专注于文档处理性能与日常编辑体验。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="InkMark — Markdown 编辑器" />
+  <meta property="og:description" content="面向 Windows 与 Android 的所见即所得 Markdown 编辑器，专注于文档处理性能与日常编辑体验。" />
+  <meta property="og:url" content="https://1atlas0.github.io/InkMark-Release/" />
+  <link rel="canonical" href="https://1atlas0.github.io/InkMark-Release/" />
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('inkmark-site-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,7 +33,7 @@
         <span class="version-badge" data-role="version-badge">v1.0.0</span>
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Primary">
         <a href="#downloads" data-i18n="navDownloads">下载</a>
         <a href="#preview" data-i18n="navPreview">在线体验</a>
         <a href="#features" data-i18n="navFeatures">功能</a>
@@ -99,7 +114,7 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" data-i18n="previewTitle">在线体验</h2>
-          <p class="section-desc" data-i18n="previewDesc">点击文档段落可切换 Markdown 源码与渲染视图，通过上方按钮切换平台视图或主题。</p>
+          <p class="section-desc" data-i18n="previewDesc">点击任意段落可直接编辑 Markdown 源码并实时预览排版，通过上方按钮切换视图或主题。</p>
         </div>
 
         <!-- Mode & Theme Controls -->
@@ -160,7 +175,7 @@
                 <span class="mock-menu-item" data-i18n="menuTheme">主题(T)</span>
                 <span class="mock-menu-item" data-i18n="menuHelp">帮助(H)</span>
               </div>
-              <div class="mock-menu-center">document.md — InkMark</div>
+              <div class="mock-menu-center" id="mock-window-title">document.md — InkMark</div>
               <div class="mock-win-controls">
                 <span class="mock-win-btn">─</span>
                 <span class="mock-win-btn">□</span>
@@ -173,7 +188,7 @@
               <aside class="mock-sidebar" id="mock-sidebar">
                 <div class="mock-left-column">
                   <ul class="mock-left-icons-top">
-                    <li class="mock-left-icon active" data-side-panel="toc" title="目录 (Table of Contents)">
+                    <li class="mock-left-icon active" data-side-panel="toc" data-i18n-title="sideTocTitle" title="目录">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="4" y="3" width="16" height="18" rx="2" />
                         <line x1="8" y1="8" x2="16" y2="8" />
@@ -181,20 +196,20 @@
                         <line x1="8" y1="16" x2="13" y2="16" />
                       </svg>
                     </li>
-                    <li class="mock-left-icon" data-side-panel="search" title="搜索 (Search)">
+                    <li class="mock-left-icon" data-side-panel="search" data-i18n-title="sideSearchTitle" title="搜索">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="7" />
                         <line x1="20" y1="20" x2="16.2" y2="16.2" />
                       </svg>
                     </li>
-                    <li class="mock-left-icon" data-side-panel="files" title="文件与最近使用 (Files)">
+                    <li class="mock-left-icon" data-side-panel="files" data-i18n-title="sideFilesTitle" title="文件">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                       </svg>
                     </li>
                   </ul>
                   <ul class="mock-left-icons-bottom">
-                    <li class="mock-left-icon-settings" title="偏好设置 (Preferences)">
+                    <li class="mock-left-icon-settings" id="mock-reset-demo-btn" data-i18n-title="resetDemoTitle" title="重置示例内容">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="3" />
                         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
@@ -207,62 +222,20 @@
                   <!-- Panel 1: TOC (side-bar-toc) -->
                   <div id="mock-panel-toc" class="mock-side-bar-toc">
                     <div class="mock-panel-title" data-i18n="sideTocTitle">目录</div>
-                    <div class="mock-toc-tree">
-                      <div class="mock-toc-item active" data-target-block="b-title">
-                        <span class="mock-tree-caret expanded">▸</span>
-                        <span class="mock-toc-level">H1</span>
-                        <span class="mock-toc-label" data-i18n="tocH1">所见即所得编辑</span>
-                      </div>
-                      <div class="mock-toc-item child" data-target-block="b-math">
-                        <span class="mock-tree-caret leaf">▸</span>
-                        <span class="mock-toc-level">H2</span>
-                        <span class="mock-toc-label" data-i18n="tocH2Math">行内语法与公式</span>
-                      </div>
-                      <div class="mock-toc-item child" data-target-block="b-mermaid">
-                        <span class="mock-tree-caret leaf">▸</span>
-                        <span class="mock-toc-level">H2</span>
-                        <span class="mock-toc-label" data-i18n="tocH2Diag">流程图渲染</span>
-                      </div>
-                      <div class="mock-toc-item child" data-target-block="b-table">
-                        <span class="mock-tree-caret leaf">▸</span>
-                        <span class="mock-toc-level">H2</span>
-                        <span class="mock-toc-label" data-i18n="tocH2Table">表格排版</span>
-                      </div>
-                    </div>
+                    <div id="mock-toc-tree" class="mock-toc-tree"></div>
                   </div>
 
                   <!-- Panel 2: Search (side-bar-search) -->
                   <div id="mock-panel-search" class="mock-side-bar-search" style="display:none;">
                     <div class="mock-search-box">
-                      <input type="text" value="Markdown" readonly aria-label="Search in folder" />
+                      <input type="text" id="mock-search-input" value="Markdown" aria-label="Search in folder" />
                       <div class="mock-search-controls">
-                        <span title="区分大小写">Aa</span>
-                        <span title="全字匹配">ab</span>
-                        <span class="active" title="正则表达式">.*</span>
+                        <span id="mock-search-case" title="Case Sensitive">Aa</span>
+                        <span id="mock-search-word" title="Whole Word">ab</span>
                       </div>
                     </div>
-                    <div class="mock-search-info" data-i18n="searchResultInfo">在 2 个文件中找到 3 个结果</div>
-                    <div class="mock-search-results">
-                      <div class="mock-search-file">
-                        <span class="mock-tree-caret expanded">▸</span>
-                        <span>document.md</span>
-                        <span class="mock-count-badge">2</span>
-                      </div>
-                      <div class="mock-search-hit" data-target-block="b-math">
-                        展开 <mark>Markdown</mark> 标记与公式
-                      </div>
-                      <div class="mock-search-hit" data-target-block="b-mermaid">
-                        A[输入 <mark>Markdown</mark>] --&gt; B(实时排版渲染)
-                      </div>
-                      <div class="mock-search-file" style="margin-top:4px;">
-                        <span class="mock-tree-caret expanded">▸</span>
-                        <span>guide.md</span>
-                        <span class="mock-count-badge">1</span>
-                      </div>
-                      <div class="mock-search-hit">
-                        支持标准 <mark>Markdown</mark> 与扩展语法
-                      </div>
-                    </div>
+                    <div id="mock-search-info" class="mock-search-info"></div>
+                    <div id="mock-search-results" class="mock-search-results"></div>
                   </div>
 
                   <!-- Panel 3: Files & Recent (tree-view + recentList.vue) -->
@@ -274,12 +247,12 @@
                         <span data-i18n="sideOpenedFiles">已打开的文件</span>
                       </div>
                       <div class="mock-tree-items">
-                        <div class="mock-tree-row active">
-                          <span class="mock-unsaved-dot"></span>
+                        <div class="mock-tree-row active" data-doc-switch="document.md">
+                          <span class="mock-unsaved-dot" data-unsaved-for="document.md"></span>
                           <span>document.md</span>
                         </div>
-                        <div class="mock-tree-row">
-                          <span class="mock-unsaved-dot" style="opacity:0;"></span>
+                        <div class="mock-tree-row" data-doc-switch="guide.md">
+                          <span class="mock-unsaved-dot" data-unsaved-for="guide.md" style="opacity:0;"></span>
                           <span>guide.md</span>
                         </div>
                       </div>
@@ -292,14 +265,14 @@
                         <span>InkMark-Notes</span>
                       </div>
                       <div class="mock-tree-items">
-                        <div class="mock-tree-row">
+                        <div class="mock-tree-row" style="cursor:default;">
                           <span class="mock-tree-caret">▸</span>
                           <span>assets</span>
                         </div>
-                        <div class="mock-tree-row active" style="padding-left:20px;">
+                        <div class="mock-tree-row active" style="padding-left:20px;" data-doc-switch="document.md">
                           <span>📄 document.md</span>
                         </div>
-                        <div class="mock-tree-row" style="padding-left:20px;">
+                        <div class="mock-tree-row" style="padding-left:20px;" data-doc-switch="guide.md">
                           <span>📄 guide.md</span>
                         </div>
                       </div>
@@ -315,20 +288,20 @@
                         <div class="mock-recent-tabs">
                           <button type="button" class="mock-recent-tab-btn active" data-recent-filter="all">
                             <span data-i18n="recentAll">全部</span>
-                            <span class="mock-count-badge">3</span>
+                            <span class="mock-count-badge" id="recent-count-all">3</span>
                           </button>
-                          <button type="button" class="mock-recent-tab-btn" data-recent-filter="files">
+                          <button type="button" class="mock-recent-tab-btn" data-recent-filter="file">
                             <span data-i18n="recentFiles">文件</span>
-                            <span class="mock-count-badge">2</span>
+                            <span class="mock-count-badge" id="recent-count-file">2</span>
                           </button>
-                          <button type="button" class="mock-recent-tab-btn" data-recent-filter="folders">
+                          <button type="button" class="mock-recent-tab-btn" data-recent-filter="folder">
                             <span data-i18n="recentFolders">文件夹</span>
-                            <span class="mock-count-badge">1</span>
+                            <span class="mock-count-badge" id="recent-count-folder">1</span>
                           </button>
                         </div>
-                        <span class="mock-clear-recent" data-i18n="recentClear">清空</span>
+                        <button type="button" id="mock-clear-recent-btn" class="mock-clear-recent" data-i18n="recentClear">清空</button>
                       </div>
-                      <div class="mock-recent-items">
+                      <div id="mock-recent-items" class="mock-recent-items">
                         <div class="mock-recent-item" data-recent-type="folder">
                           <div class="mock-recent-icon folder">
                             <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor">
@@ -340,7 +313,7 @@
                             <div class="mock-recent-path">~/Workspace/InkMark-Notes</div>
                           </div>
                         </div>
-                        <div class="mock-recent-item" data-recent-type="file">
+                        <div class="mock-recent-item" data-recent-type="file" data-doc-switch="document.md">
                           <div class="mock-recent-icon file">
                             <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor">
                               <path d="M3.75 1.5a1.25 1.25 0 0 0-1.25 1.25v10.5c0 .69.56 1.25 1.25 1.25h8.5c.69 0 1.25-.56 1.25-1.25V6.414a1.25 1.25 0 0 0-.366-.884L9.97 2.116A1.25 1.25 0 0 0 9.086 1.75H3.75z" />
@@ -351,7 +324,7 @@
                             <div class="mock-recent-path">~/Workspace/InkMark-Notes/document.md</div>
                           </div>
                         </div>
-                        <div class="mock-recent-item" data-recent-type="file">
+                        <div class="mock-recent-item" data-recent-type="file" data-doc-switch="guide.md">
                           <div class="mock-recent-icon file">
                             <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor">
                               <path d="M3.75 1.5a1.25 1.25 0 0 0-1.25 1.25v10.5c0 .69.56 1.25 1.25 1.25h8.5c.69 0 1.25-.56 1.25-1.25V6.414a1.25 1.25 0 0 0-.366-.884L9.97 2.116A1.25 1.25 0 0 0 9.086 1.75H3.75z" />
@@ -363,6 +336,10 @@
                           </div>
                         </div>
                       </div>
+                      <div id="mock-recent-empty" class="mock-recent-empty" style="display:none;">
+                        <span data-i18n="recentEmptyText">暂无最近记录</span>
+                        <button type="button" id="mock-restore-recent-btn" class="mock-restore-btn" data-i18n="recentRestore">恢复示例</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -372,83 +349,24 @@
               <div class="mock-editor-pane">
                 <div class="mock-tabbar">
                   <div class="mock-tabs-list">
-                    <div class="mock-tab-item active">
+                    <div class="mock-tab-item active" data-doc-tab="document.md">
                       <span>document.md</span>
-                      <span class="mock-tab-dot"></span>
+                      <span class="mock-tab-dot" data-unsaved-for="document.md"></span>
                       <span class="mock-tab-close">×</span>
                     </div>
-                    <div class="mock-tab-item">
+                    <div class="mock-tab-item" data-doc-tab="guide.md">
                       <span>guide.md</span>
+                      <span class="mock-tab-dot" data-unsaved-for="guide.md" style="display:none;"></span>
                       <span class="mock-tab-close">×</span>
                     </div>
-                    <div class="mock-tab-plus" title="新建标签页">+</div>
                   </div>
-                  <span class="mock-hint-pill" data-i18n="editorHintPill">点击段落切换源码与预览</span>
-                </div>
-
-                <div class="mock-canvas">
-                  <div class="mock-block" data-block-id="b-title">
-                    <div class="raw-view"><span class="syntax-marker"># </span>所见即所得编辑<span class="mock-cursor"></span></div>
-                    <div class="rendered-view">
-                      <h3 style="font-size:1.45rem;font-weight:800;letter-spacing:-0.02em;">所见即所得编辑</h3>
-                    </div>
-                  </div>
-
-                  <div class="mock-block editing" data-block-id="b-math">
-                    <div class="raw-view">光标进入段落时展开 <span class="syntax-marker">**Markdown 标记**</span> 与公式 <span class="syntax-marker">$</span>E = mc^2<span class="syntax-marker">$</span>，光标移出后自动恢复为渲染视图。<span class="mock-cursor"></span></div>
-                    <div class="rendered-view" style="font-size:0.95rem;">
-                      光标进入段落时展开 <strong>Markdown 标记</strong> 与公式 <span class="mock-math-box">E = mc²</span>，光标移出后自动恢复为渲染视图。
-                    </div>
-                  </div>
-
-                  <div class="mock-block" data-block-id="b-mermaid">
-                    <div class="raw-view"><span class="syntax-marker">```mermaid</span>
-graph LR
-  A[输入 Markdown] --&gt; B(实时排版渲染) --&gt; C[导出 PDF / HTML]
-<span class="syntax-marker">```</span><span class="mock-cursor"></span></div>
-                    <div class="rendered-view">
-                      <div class="mock-mermaid-diagram">
-                        <span class="mermaid-node">输入 Markdown</span>
-                        <span class="mermaid-arrow">──►</span>
-                        <span class="mermaid-node">实时排版渲染</span>
-                        <span class="mermaid-arrow">──►</span>
-                        <span class="mermaid-node">导出 PDF / HTML</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="mock-block" data-block-id="b-table">
-                    <div class="raw-view"><span class="syntax-marker">| 功能项 | 编辑区表现 | 导出与性能表现 |</span>
-<span class="syntax-marker">| :--- | :--- | :--- |</span>
-| 大文档加载 | 侧边栏大纲快速定位 | 1 MB 文档约 0.71 秒打开 |
-| 宽表格排版 | 编辑区独立横向滚动 | 导出 PDF 跨页重复表头 |<span class="mock-cursor"></span></div>
-                    <div class="rendered-view">
-                      <div class="mock-wide-table-wrap">
-                        <table class="mock-wide-table">
-                          <thead>
-                            <tr>
-                              <th>功能项</th>
-                              <th>编辑区表现</th>
-                              <th>导出与性能表现</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><strong>大文档加载</strong></td>
-                              <td>侧边栏大纲快速定位</td>
-                              <td style="color:var(--m-accent);font-weight:700;">1 MB 文档约 0.71 秒打开</td>
-                            </tr>
-                            <tr>
-                              <td><strong>宽表格排版</strong></td>
-                              <td>编辑区独立横向滚动</td>
-                              <td>导出 PDF 跨页重复表头</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+                  <div class="mock-tabbar-right">
+                    <span class="mock-word-counter" id="mock-desktop-word-count">128 词</span>
+                    <span class="mock-hint-pill" data-i18n="editorHintPill">点击段落可直接编辑</span>
                   </div>
                 </div>
+
+                <div id="mock-desktop-canvas" class="mock-canvas"></div>
               </div>
             </div>
           </div>
@@ -456,17 +374,17 @@ graph LR
           <!-- 2. Android Mobile Mockup (Matches real InkMark Android EditorScreen.vue) -->
           <div id="mock-view-android" class="mock-android-shell">
             <div class="mock-android-topbar">
-              <button type="button" class="mock-android-nav-btn" aria-label="返回">
+              <button type="button" class="mock-android-nav-btn" id="mock-android-reset-btn" data-i18n-title="resetDemoTitle" title="重置示例内容" aria-label="重置">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M15 6l-6 6 6 6" />
                 </svg>
               </button>
               <div class="mock-android-doc-heading">
                 <div class="mock-android-doc-title">document.md</div>
-                <div class="mock-android-doc-status" data-i18n="androidSavedStatus">已保存 · 128 词</div>
+                <div class="mock-android-doc-status" id="mock-android-status">已保存 · 86 词</div>
               </div>
               <div class="mock-android-actions">
-                <button type="button" class="mock-android-icon-btn" id="mock-android-outline-btn" title="大纲 (Outline)">
+                <button type="button" class="mock-android-icon-btn" id="mock-android-outline-btn" data-i18n-title="sideTocTitle" title="目录">
                   <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                     <circle cx="5" cy="6" r="1.4" fill="currentColor" stroke="none" />
                     <path d="M9 6h10.5" />
@@ -476,7 +394,7 @@ graph LR
                     <path d="M16 18h3.5" />
                   </svg>
                 </button>
-                <button type="button" class="mock-android-icon-btn" aria-label="更多">
+                <button type="button" class="mock-android-icon-btn" id="mock-android-more-btn" data-i18n-title="resetDemoTitle" title="重置示例内容" aria-label="更多">
                   <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
                     <circle cx="12" cy="5" r="1.6" />
                     <circle cx="12" cy="12" r="1.6" />
@@ -492,54 +410,19 @@ graph LR
                 <span data-i18n="sideTocTitle">目录</span>
                 <button type="button" id="mock-android-outline-close" class="mock-android-sheet-close">✕</button>
               </div>
-              <div class="mock-android-outline-list">
-                <div class="mock-android-outline-item active" data-mobile-target="m-1">
-                  <span class="mock-toc-level">H1</span>
-                  <span>移动端编辑与阅读</span>
-                </div>
-                <div class="mock-android-outline-item" data-mobile-target="m-2">
-                  <span class="mock-toc-level">H2</span>
-                  <span>公式与快捷工具栏</span>
-                </div>
-                <div class="mock-android-outline-item" data-mobile-target="m-3">
-                  <span class="mock-toc-level">H2</span>
-                  <span>任务列表与导出</span>
-                </div>
-              </div>
+              <div id="mock-android-outline-list" class="mock-android-outline-list"></div>
             </div>
 
-            <div class="mock-canvas mock-android-canvas">
-              <div class="mock-block" data-block-id="m-1">
-                <div class="raw-view"><span class="syntax-marker"># </span>移动端编辑与阅读<span class="mock-cursor"></span></div>
-                <div class="rendered-view">
-                  <h3 style="font-size:1.2rem;font-weight:800;">移动端编辑与阅读</h3>
-                </div>
-              </div>
-              <div class="mock-block editing" data-block-id="m-2">
-                <div class="raw-view">保持与桌面端一致的排版效果，支持 <span class="syntax-marker">**底部快捷工具栏**</span> 与公式 <span class="syntax-marker">$</span>E = mc^2<span class="syntax-marker">$</span> 实时渲染。<span class="mock-cursor"></span></div>
-                <div class="rendered-view" style="font-size:0.9rem;">
-                  保持与桌面端一致的排版效果，支持 <strong>底部快捷工具栏</strong> 与公式 <span class="mock-math-box">E = mc²</span> 实时渲染。
-                </div>
-              </div>
-              <div class="mock-block" data-block-id="m-3">
-                <div class="raw-view"><span class="syntax-marker">- [x] </span>支持本地 Markdown 文件读写
-<span class="syntax-marker">- [x] </span>底部工具栏快速插入常用格式<span class="mock-cursor"></span></div>
-                <div class="rendered-view" style="font-size:0.88rem;">
-                  <div>✅ 支持本地 Markdown 文件读写</div>
-                  <div>✅ 底部工具栏快速插入常用格式</div>
-                </div>
-              </div>
-            </div>
+            <div id="mock-android-canvas" class="mock-canvas mock-android-canvas"></div>
 
             <div class="mock-android-toolbar">
-              <span class="mock-tb-key">↶</span>
-              <span class="mock-tb-key">↷</span>
-              <span class="mock-tb-key">H1</span>
-              <span class="mock-tb-key"><b>B</b></span>
-              <span class="mock-tb-key"><i>I</i></span>
-              <span class="mock-tb-key">∑</span>
-              <span class="mock-tb-key">⊞</span>
-              <span class="mock-tb-key">&lt;/&gt;</span>
+              <button type="button" class="mock-tb-key" data-tb-action="reset" title="Reset">↺</button>
+              <button type="button" class="mock-tb-key" data-tb-action="h2">H2</button>
+              <button type="button" class="mock-tb-key" data-tb-action="bold"><b>B</b></button>
+              <button type="button" class="mock-tb-key" data-tb-action="italic"><i>I</i></button>
+              <button type="button" class="mock-tb-key" data-tb-action="math">∑</button>
+              <button type="button" class="mock-tb-key" data-tb-action="task">☑</button>
+              <button type="button" class="mock-tb-key" data-tb-action="code">&lt;/&gt;</button>
             </div>
           </div>
 
@@ -548,23 +431,23 @@ graph LR
             <div class="pdf-page-card">
               <div class="pdf-page-header">
                 <span>document.pdf</span>
-                <span>第 1 / 2 页</span>
+                <span data-i18n="pdfPage1">第 1 / 2 页</span>
               </div>
               <table class="pdf-table">
                 <thead>
                   <tr>
-                    <th style="width:28%;">功能项</th>
-                    <th style="width:72%;">导出排版表现</th>
+                    <th style="width:30%;" data-i18n="pdfColItem">功能项</th>
+                    <th style="width:70%;" data-i18n="pdfColBehavior">导出排版表现</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>字号同步</td>
-                    <td>自动继承当前设置的正文与代码块字号</td>
+                    <td data-i18n="pdfRow1Title">字号同步</td>
+                    <td data-i18n="pdfRow1Desc">自动继承当前设置的正文与代码块字号</td>
                   </tr>
                   <tr>
-                    <td>宽表格缩放</td>
-                    <td>按页面可用宽度自动缩放，单元格长文本自动换行</td>
+                    <td data-i18n="pdfRow2Title">宽表格缩放</td>
+                    <td data-i18n="pdfRow2Desc">按页面可用宽度自动缩放，单元格长文本自动换行</td>
                   </tr>
                 </tbody>
               </table>
@@ -573,23 +456,23 @@ graph LR
             <div class="pdf-page-card">
               <div class="pdf-page-header">
                 <span>document.pdf</span>
-                <span>第 2 / 2 页</span>
+                <span data-i18n="pdfPage2">第 2 / 2 页</span>
               </div>
               <table class="pdf-table">
                 <thead>
                   <tr>
-                    <th style="width:28%;">功能项 (续页表头)</th>
-                    <th style="width:72%;">导出排版表现</th>
+                    <th style="width:30%;" data-i18n="pdfColItemCont">功能项 (续页表头)</th>
+                    <th style="width:70%;" data-i18n="pdfColBehavior">导出排版表现</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>跨页表头</td>
-                    <td>长表格翻页时自动重复顶部表头行</td>
+                    <td data-i18n="pdfRow3Title">跨页表头</td>
+                    <td data-i18n="pdfRow3Desc">长表格翻页时自动重复顶部表头行</td>
                   </tr>
                   <tr>
-                    <td>导出控制</td>
-                    <td>显示导出进度，支持在导出过程中取消操作</td>
+                    <td data-i18n="pdfRow4Title">导出控制</td>
+                    <td data-i18n="pdfRow4Desc">显示导出进度，支持在导出过程中取消操作</td>
                   </tr>
                 </tbody>
               </table>
@@ -726,7 +609,7 @@ graph LR
           <div>
             <h2 class="section-title" data-i18n="themesTitle">内置主题</h2>
             <p class="section-desc" data-i18n="themesDesc">
-              包含 39 款浅色与深色主题。点击右侧卡片可在上方编辑器中预览配色效果。
+              包含 39 款浅色与深色主题。点击右侧卡片可同步切换演示编辑器配色。
             </p>
 
             <div class="theme-feat-list">
@@ -751,7 +634,26 @@ graph LR
                 </div>
                 <div>
                   <h4 data-i18n="themeFeat2Title">实时预览切换</h4>
-                  <p data-i18n="themeFeat2Desc">在上方主题按钮悬停预览，点击主题卡片应用配色。</p>
+                  <p data-i18n="themeFeat2Desc">点击任意主题卡片即可实时更新配色预览，无需重新加载文档。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- In-place Live Theme Sample Card (avoids forced scroll jump) -->
+            <div id="theme-live-card" class="theme-live-card" data-mock-theme="inkmark-dark">
+              <div class="theme-live-head">
+                <span id="theme-live-name">InkMark Dark</span>
+                <a href="#preview" class="theme-jump-link" data-i18n="themeJumpLink">在编辑器中查看 ↑</a>
+              </div>
+              <div class="theme-live-body">
+                <div class="theme-live-h" data-i18n="swatchSampleHeading"># 章节标题</div>
+                <div class="theme-live-p">
+                  <span data-i18n="swatchSampleBody">实时渲染 </span>
+                  <strong data-i18n="swatchSampleBold">加粗文本</strong>
+                  <span> · </span>
+                  <code>inline code</code>
+                  <span> · </span>
+                  <span class="mock-math-box">E = mc²</span>
                 </div>
               </div>
             </div>
@@ -759,10 +661,10 @@ graph LR
 
           <div>
             <div class="swatch-grid">
-              <div class="swatch-card" data-swatch-theme="inkmark-dark">
+              <div class="swatch-card active" data-swatch-theme="inkmark-dark" data-swatch-label="InkMark Dark">
                 <div class="swatch-pv" style="background:#0f141c;color:#e2e8f0;">
                   <div class="swatch-pv-tag" style="color:#2dd4bf;">InkMark</div>
-                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
                 </div>
                 <div class="swatch-meta">
                   <span>InkMark Dark</span>
@@ -773,10 +675,10 @@ graph LR
                 </div>
               </div>
 
-              <div class="swatch-card" data-swatch-theme="github-light">
+              <div class="swatch-card" data-swatch-theme="github-light" data-swatch-label="GitHub Light">
                 <div class="swatch-pv" style="background:#ffffff;color:#1f2328;">
                   <div class="swatch-pv-tag" style="color:#0969da;">GitHub</div>
-                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
                 </div>
                 <div class="swatch-meta">
                   <span>GitHub Light</span>
@@ -787,10 +689,10 @@ graph LR
                 </div>
               </div>
 
-              <div class="swatch-card" data-swatch-theme="one-light">
+              <div class="swatch-card" data-swatch-theme="one-light" data-swatch-label="One Light">
                 <div class="swatch-pv" style="background:#fafafa;color:#383a42;">
                   <div class="swatch-pv-tag" style="color:#4078f2;">One</div>
-                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
                 </div>
                 <div class="swatch-meta">
                   <span>One Light</span>
@@ -801,10 +703,10 @@ graph LR
                 </div>
               </div>
 
-              <div class="swatch-card" data-swatch-theme="cobalt2">
+              <div class="swatch-card" data-swatch-theme="cobalt2" data-swatch-label="Cobalt2">
                 <div class="swatch-pv" style="background:#193549;color:#e1efff;">
                   <div class="swatch-pv-tag" style="color:#ffc600;">Cobalt2</div>
-                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
                 </div>
                 <div class="swatch-meta">
                   <span>Cobalt2</span>
@@ -815,10 +717,10 @@ graph LR
                 </div>
               </div>
 
-              <div class="swatch-card" data-swatch-theme="vesper">
+              <div class="swatch-card" data-swatch-theme="vesper" data-swatch-label="Vesper">
                 <div class="swatch-pv" style="background:#101010;color:#ececec;">
                   <div class="swatch-pv-tag" style="color:#ffc799;">Vesper</div>
-                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
                 </div>
                 <div class="swatch-meta">
                   <span>Vesper</span>
@@ -829,10 +731,10 @@ graph LR
                 </div>
               </div>
 
-              <div class="swatch-card" data-swatch-theme="poimandres">
+              <div class="swatch-card" data-swatch-theme="poimandres" data-swatch-label="Poimandres">
                 <div class="swatch-pv" style="background:#1b1e28;color:#e4f0fb;">
                   <div class="swatch-pv-tag" style="color:#5de4c7;">Poimandres</div>
-                  # 标题<br/>**加粗** _斜体_<br/>&gt; 引用文本
+                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
                 </div>
                 <div class="swatch-meta">
                   <span>Poimandres</span>
@@ -882,7 +784,7 @@ graph LR
           <h2 class="section-title" data-i18n="notesTitle">更新日志</h2>
         </div>
 
-        <div class="changelog-layout">
+        <div id="changelog-layout" class="changelog-layout">
           <div id="version-nav" class="version-nav"></div>
           <div id="changelog-body" class="changelog-content-card"></div>
         </div>
@@ -899,6 +801,7 @@ graph LR
       </div>
       <div class="footer-links">
         <a href="https://github.com/1ATLAS0/InkMark-Release" data-brand-link="repo" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/1ATLAS0/InkMark-Release/releases" data-brand-link="releases" target="_blank" rel="noopener" data-i18n="footerReleases">历史版本</a>
         <a href="CHANGELOG.md" data-brand-link="changelog" target="_blank" rel="noopener" data-i18n="footerChangelog">更新日志</a>
       </div>
     </div>
