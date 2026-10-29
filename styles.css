@@ -222,11 +222,11 @@ a {
   color: var(--text-secondary);
 }
 
-/* Dual Platform Cards Grid */
+/* Platform Cards Grid */
 .platform-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -379,6 +379,36 @@ a {
 .btn-dl-sm.secondary:hover {
   background: var(--bg-surface-hover);
   border-color: var(--accent-teal);
+}
+
+.btn-dl-sm.soon-btn {
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  border: 1px dashed var(--border-strong);
+  cursor: default;
+  pointer-events: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+.platform-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(45, 212, 191, 0.12);
+  color: var(--accent-teal);
+  border: 1px solid rgba(45, 212, 191, 0.28);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.artifact-item.is-soon {
+  opacity: 0.9;
+  border-style: dashed;
 }
 
 /* Generic Sections */
@@ -1969,7 +1999,7 @@ a {
 }
 
 /* Tablet & Narrow Desktop Breakpoint */
-@media (max-width: 920px) {
+@media (max-width: 980px) {
   .platform-grid,
   .changelog-layout,
   .theme-split {
@@ -2094,9 +2124,15 @@ a {
     gap: 16px;
   }
 
-  /* On mobile web, show Android download card first */
+  /* On mobile web, show Android download card first, followed by Windows and Linux */
   #card-android {
     order: -1;
+  }
+  #card-windows {
+    order: 0;
+  }
+  #card-linux {
+    order: 1;
   }
 
   .platform-card {
