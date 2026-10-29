@@ -192,6 +192,7 @@ a {
 .hero {
   padding: 64px 0 40px;
   text-align: center;
+  scroll-margin-top: 76px;
 }
 
 .hero-title {
@@ -384,6 +385,7 @@ a {
 .section {
   padding: 56px 0;
   border-top: 1px solid var(--border-color);
+  scroll-margin-top: 76px;
 }
 
 .section-header {
@@ -651,6 +653,8 @@ a {
   color: var(--text-secondary);
   font-weight: 600;
   margin-right: 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .theme-swatch-btn {
@@ -783,6 +787,7 @@ a {
 }
 
 .mock-menubar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -806,9 +811,14 @@ a {
 }
 
 .mock-menu-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
   font-family: var(--font-mono);
   font-size: 0.76rem;
   color: var(--m-muted);
+  white-space: nowrap;
 }
 
 .mock-win-controls {
@@ -1526,6 +1536,15 @@ a {
   white-space: nowrap;
 }
 
+.mock-wide-table th:last-child,
+.mock-wide-table td:last-child {
+  border-right: none;
+}
+
+.mock-wide-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
 .mock-wide-table th {
   background: var(--m-surface);
   color: var(--m-accent);
@@ -1811,17 +1830,25 @@ a {
 .ext-mini-flow {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
+  gap: 6px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .ext-mini-node {
-  padding: 3px 9px;
+  padding: 3px 8px;
   border-radius: 6px;
   background: rgba(45, 212, 191, 0.12);
   border: 1px solid rgba(45, 212, 191, 0.35);
   color: var(--accent-teal);
   font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+.ext-mini-arrow {
+  color: var(--text-secondary);
+  flex-shrink: 0;
 }
 
 .ext-mini-badges {
@@ -1844,14 +1871,14 @@ a {
   display: grid;
   grid-template-columns: 1fr 1.35fr;
   gap: 36px;
-  align-items: start;
+  align-items: center;
 }
 
 .theme-feat-list {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .theme-feat-item {
@@ -1869,60 +1896,6 @@ a {
 .theme-feat-item p {
   font-size: 0.86rem;
   color: var(--text-secondary);
-}
-
-/* In-place Live Theme Sample Card */
-.theme-live-card {
-  margin-top: 22px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--m-border);
-  background: var(--m-bg);
-  color: var(--m-text);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.18s ease;
-}
-
-.theme-live-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 14px;
-  background: var(--m-menubar);
-  border-bottom: 1px solid var(--m-border);
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.theme-jump-link {
-  color: var(--m-accent);
-  font-size: 0.76rem;
-}
-
-.theme-jump-link:hover {
-  text-decoration: underline;
-}
-
-.theme-live-body {
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.theme-live-h {
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--m-accent);
-}
-
-.theme-live-p {
-  font-size: 0.84rem;
-  color: var(--m-text);
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
 }
 
 .swatch-grid {
@@ -2073,6 +2046,16 @@ a {
     height: 30px;
   }
 
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .icon-btn {
+    height: 32px;
+    padding: 0 9px;
+    font-size: 0.78rem;
+  }
+
   .nav-links {
     display: flex;
     order: 3;
@@ -2093,6 +2076,7 @@ a {
 
   .hero {
     padding: 36px 0 24px;
+    scroll-margin-top: 104px;
   }
 
   .hero-title {
@@ -2133,6 +2117,7 @@ a {
 
   .section {
     padding: 40px 0;
+    scroll-margin-top: 104px;
   }
 
   .section-header {
@@ -2231,5 +2216,9 @@ a {
   .ext-grid,
   .swatch-grid {
     grid-template-columns: 1fr;
+  }
+
+  .github-btn .github-label {
+    display: none;
   }
 }

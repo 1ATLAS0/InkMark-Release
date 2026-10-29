@@ -136,15 +136,11 @@
       extExportTitle: '文档导出',
       extExportDesc: '支持导出为 PDF 与独立 HTML 文件，保留当前主题样式并支持宽表格跨页排版。',
       themesTitle: '内置主题',
-      themesDesc: '包含 39 款浅色与深色主题。点击右侧卡片可同步切换演示配色。',
+      themesDesc: '包含 39 款浅色与深色主题。点击右侧卡片可在上方编辑器中预览配色效果。',
       themeFeat1Title: '浅色与深色模式',
       themeFeat1Desc: '提供多种对比度与色调的预设方案，适应不同光线环境下的阅读与编辑。',
       themeFeat2Title: '实时预览切换',
-      themeFeat2Desc: '点击任意主题卡片即可实时更新配色预览，无需重新加载文档。',
-      themeJumpLink: '在编辑器中查看 ↑',
-      swatchSampleHeading: '# 章节标题',
-      swatchSampleBody: '实时渲染 ',
-      swatchSampleBold: '加粗文本',
+      themeFeat2Desc: '在上方主题按钮悬停预览，点击右侧主题卡片即可切换配色。',
       swatchCardSample: '# 标题\n**加粗** _斜体_\n> 引用文本',
       themeMoreNote: '另含 33 款内置主题',
       themeAppliedToast: '已应用主题：',
@@ -246,15 +242,11 @@
       extExportTitle: 'Document Export',
       extExportDesc: 'Export documents to PDF and standalone HTML with current theme styles and multi-page table headers.',
       themesTitle: 'Built-in Themes',
-      themesDesc: 'Includes 39 light and dark themes. Click any card to preview the color scheme.',
+      themesDesc: 'Includes 39 light and dark themes. Click any card to preview the color scheme in the editor above.',
       themeFeat1Title: 'Light & Dark Modes',
       themeFeat1Desc: 'Multiple contrast and color presets designed for comfortable reading and editing in any lighting.',
       themeFeat2Title: 'Live Theme Preview',
-      themeFeat2Desc: 'Click any theme card to update the live preview immediately without reloading.',
-      themeJumpLink: 'View in editor ↑',
-      swatchSampleHeading: '# Section Heading',
-      swatchSampleBody: 'Live rendering with ',
-      swatchSampleBold: 'bold text',
+      themeFeat2Desc: 'Hover over the theme buttons above to preview colors, or click a theme card to apply them.',
       swatchCardSample: '# Heading\n**Bold** _Italic_\n> Blockquote',
       themeMoreNote: 'Plus 33 additional built-in themes',
       themeAppliedToast: 'Theme applied: ',
@@ -1166,8 +1158,6 @@
     }
 
     const stageEl = document.getElementById('mockup-stage');
-    const liveCardEl = document.getElementById('theme-live-card');
-    const liveNameEl = document.getElementById('theme-live-name');
     const themePickerEl = document.getElementById('mock-theme-picker');
     const sidebarEl = document.getElementById('mock-sidebar');
     let lockedMockTheme = 'inkmark-dark';
@@ -1183,11 +1173,9 @@
 
     function applyMockThemePreview(themeId) {
       if (stageEl) stageEl.setAttribute('data-mock-theme', themeId);
-      if (liveCardEl) liveCardEl.setAttribute('data-mock-theme', themeId);
-      if (liveNameEl) liveNameEl.textContent = THEME_NAMES[themeId] || themeId;
     }
 
-    function commitMockTheme(themeId, notifyToast) {
+    function commitMockTheme(themeId, fromSwatchGrid) {
       lockedMockTheme = themeId;
       applyMockThemePreview(themeId);
       if (themePickerEl) {
@@ -1198,8 +1186,11 @@
       document.querySelectorAll('.swatch-card[data-swatch-theme]').forEach((c) =>
         c.classList.toggle('active', c.getAttribute('data-swatch-theme') === themeId)
       );
-      if (notifyToast) {
+      if (fromSwatchGrid) {
         showToast(`${t('themeAppliedToast')}${THEME_NAMES[themeId] || themeId}`);
+        if (stageEl && window.innerWidth > 768) {
+          stageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
       }
     }
 

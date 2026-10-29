@@ -1,5 +1,5 @@
 window.__INKMARK_RELEASE_DATA__ = {
-  "generatedAt": "2026-10-29T06:29:10.708Z",
+  "generatedAt": "2026-10-29T06:55:06.833Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
