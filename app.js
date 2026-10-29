@@ -65,18 +65,12 @@
       winBadge: '推荐',
       androidCardTitle: 'Android',
       androidCardReq: 'Android 7.0+',
-      androidBadge: '移动双栏',
-      androidFeatTitle: '折叠屏与平板',
-      androidFeatBadge: '📱 深度适配',
-      androidFeatDesc: '针对大屏双栏排版、触控手势与软键盘优化',
       linuxCardTitle: 'Linux',
       linuxCardReq: 'x64 / ARM64 (主流发行版)',
       comingSoonBadge: '即将推出',
       comingSoonBtn: '即将推出',
       linuxPkgUniversal: '通用包 (.AppImage)',
-      linuxPkgUniversalDesc: '主流 Linux 发行版免安装即开即用（Ubuntu / Fedora / Arch）',
       linuxPkgDeb: '安装包 (.deb)',
-      linuxPkgDebDesc: 'Debian / Ubuntu 原生系统软件包，集成桌面启动器',
       recommendedBadge: '推荐',
       downloadBtn: '下载',
       previewTitle: '在线体验',
@@ -184,18 +178,12 @@
       winBadge: 'Recommended',
       androidCardTitle: 'Android',
       androidCardReq: 'Android 7.0+',
-      androidBadge: 'Touch & Tablet',
-      androidFeatTitle: 'Foldables & Tablets',
-      androidFeatBadge: '📱 Optimized',
-      androidFeatDesc: 'Dual-pane reading, touch gestures, and virtual keyboard ergonomics',
       linuxCardTitle: 'Linux',
       linuxCardReq: 'x64 / ARM64 (Major Distros)',
       comingSoonBadge: 'Coming Soon',
       comingSoonBtn: 'Coming Soon',
       linuxPkgUniversal: 'Universal (.AppImage)',
-      linuxPkgUniversalDesc: 'Standalone bundle for Ubuntu, Fedora, Arch, and major distros',
       linuxPkgDeb: 'Package (.deb)',
-      linuxPkgDebDesc: 'Native deb package with desktop launcher integration',
       recommendedBadge: 'Recommended',
       downloadBtn: 'Download',
       previewTitle: 'Interactive Demo',
@@ -942,7 +930,6 @@
       item.className = `artifact-item ${asset.primary ? 'is-primary' : ''}`;
 
       const label = state.lang === 'zh' ? asset.labelZh : asset.labelEn;
-      const desc = state.lang === 'zh' ? asset.descZh : asset.descEn;
       const btnVariant = asset.primary ? 'primary' : 'secondary';
 
       item.innerHTML = `
@@ -956,28 +943,10 @@
             </a>
           </div>
         </div>
-        <div class="artifact-desc">${desc}</div>
       `;
 
       container.appendChild(item);
     });
-
-    if (containerId === 'android-artifact-list') {
-      const featItem = document.createElement('div');
-      featItem.className = 'artifact-item is-feature';
-      featItem.innerHTML = `
-        <div class="artifact-top">
-          <div class="artifact-label">
-            <span>${t('androidFeatTitle')}</span>
-          </div>
-          <div class="artifact-actions">
-            <span class="btn-dl-sm feat-pill">${t('androidFeatBadge')}</span>
-          </div>
-        </div>
-        <div class="artifact-desc">${t('androidFeatDesc')}</div>
-      `;
-      container.appendChild(featItem);
-    }
   }
 
   function renderBenchmarks() {
