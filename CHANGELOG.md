@@ -1,5 +1,51 @@
 # InkMark 更新日志 / Release Notes
 
+## 1.1.0 — 待发布 / Unreleased (Windows / Android)
+
+### 中文
+
+#### 功能更新
+
+- **远程文档**：Windows 支持通过 SSH 连接 Linux，浏览、打开、编辑并保存远程 Markdown 文档；支持密码与私钥登录，以及连接的添加、编辑和移除。
+- **统一打开入口**：桌面端“打开文件夹”现在同时提供本地文件夹与已保存的远程连接；选择远程连接后会连接并直接进入远程目录。
+- **默认页面**：启动后直接显示最近文档与打开入口，不再自动创建空白文档。
+- **远程文件夹工作区**：在远程面板选择目录并点击“打开此文件夹”，文件侧栏会以连接名称显示该远程目录，可像本地文件夹一样展开、浏览和打开文档；关闭文件夹不会断开连接。
+- **远程搜索**：打开远程文件夹后，可直接在搜索侧栏查找其中的 Markdown 内容，点击结果打开并定位到对应位置。
+- **远程最近记录**：最近打开同时保留远程文件与文件夹，远程文件夹会恢复准确目录；点击会自动重连并打开。
+- **关闭文件夹**：本地与远程文件夹均可一键关闭，回到打开入口。
+- **内网使用**：远程连接所需组件随应用提供，可在内网环境中直接使用，无需联网下载额外组件。
+- **全新图标**：采用融合文档与笔尖的「墨页」图标，统一桌面端、移动端与官网的品牌形象。
+
+#### 问题修复
+
+- **保存提示**：连续保存失败时显示最新原因，保存成功后清除过期提示。
+- **标签页切换**：回到之前阅读的标签页时直接停在原位置，不再从第一行闪烁到目标位置。
+- **按钮悬停**：修复部分环境下“打开文件 / 打开文件夹”按钮悬停时背景变白的问题。
+- **最近列表**：切换“全部 / 文件 / 文件夹”时页面顶部保持固定，不再上下跳动。
+- **新建文件按钮**：悬停时文字与背景保持清晰对比，不再变得难以辨认。
+
+### English
+
+#### Feature updates
+
+- **Remote documents**: Connect to Linux over SSH on Windows to browse, open, edit and save Markdown files. Sign in with a password or private key, and add, edit or remove saved connections.
+- **One open-folder entry**: The desktop Open Folder button now offers local folders and saved remote connections; choosing a remote connection connects and opens its directory directly.
+- **Landing page**: Starting InkMark now shows recent documents and open actions instead of creating a blank document automatically.
+- **Remote folder workspace**: Choose a directory in the Remote panel and select Open this folder. The Files sidebar shows that remote directory under its connection name with the same expand, browse and open behaviour as a local folder. Closing the folder does not disconnect.
+- **Remote search**: Search Markdown content inside the open remote folder from the search sidebar, then click a result to open it at the matching position.
+- **Remote recent history**: Recent items include remote files and folders, with remote folders restoring the exact directory; selecting one reconnects automatically and opens it.
+- **Close folder**: Local and remote folders can both be closed to return to the open actions.
+- **Intranet access**: All components required for remote connections are included with the app. No Internet access or additional component downloads are required.
+- **New app icon**: A document and pen nib form the new Inkpage icon, bringing a consistent identity to desktop, mobile and the website.
+
+#### Bug fixes
+
+- **Save feedback**: Show the latest cause when consecutive saves fail, and clear outdated errors after a successful save.
+- **Tab switching**: Returning to a tab now lands at the previous reading position instead of flashing there from the first line.
+- **Button hover**: Fixed the Open File / Open Folder buttons turning white on hover in some environments.
+- **Recent list**: The top of the landing page stays fixed when switching between All, Files and Folders, so the buttons no longer jump.
+- **New File button**: Text and background keep clear contrast on hover.
+
 ## 1.0.0 — 2026-10-27 (Windows / Android)
 
 ### 中文
