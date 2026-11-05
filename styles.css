@@ -916,16 +916,30 @@ a {
 /* Shared Mockup Theme Tokens (applied to both #mockup-stage and #theme-live-card) */
 .mockup-stage,
 .theme-live-card {
-  --m-bg: #0f141c;
-  --m-sidebar: #141b26;
-  --m-menubar: #18212f;
-  --m-surface: #1b2536;
-  --m-text: #e2e8f0;
+  --m-bg: #0b101b;
+  --m-sidebar: #060a12;
+  --m-menubar: #080d17;
+  --m-surface: #141e31;
+  --m-text: #f1f5f9;
   --m-muted: #94a3b8;
   --m-accent: #2dd4bf;
   --m-border: rgba(148, 163, 184, 0.16);
-  --m-code-bg: #090d14;
-  --m-selection: rgba(45, 212, 191, 0.25);
+  --m-code-bg: #0f1726;
+  --m-selection: rgba(56, 189, 248, 0.25);
+}
+
+.mockup-stage[data-mock-theme="inkmark-light"],
+.theme-live-card[data-mock-theme="inkmark-light"] {
+  --m-bg: #f4f7fb;
+  --m-sidebar: #eaeff7;
+  --m-menubar: #e2e9f3;
+  --m-surface: #e6eef7;
+  --m-text: #0f172a;
+  --m-muted: #475569;
+  --m-accent: #1e6f7a;
+  --m-border: #d5dfec;
+  --m-code-bg: #eaf0f8;
+  --m-selection: rgba(2, 132, 199, 0.18);
 }
 
 .mockup-stage[data-mock-theme="github-light"],

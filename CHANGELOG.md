@@ -9,10 +9,14 @@
 - **远程文档**：Windows 支持通过 SSH 连接 Linux，浏览、打开、编辑并保存远程 Markdown 文档；支持密码与私钥登录，以及连接的添加、编辑和移除。
 - **统一打开入口**：桌面端“打开文件夹”现在同时提供本地文件夹与已保存的远程连接；选择远程连接后会连接并直接进入远程目录。
 - **默认页面**：启动后直接显示最近文档与打开入口，不再自动创建空白文档。
-- **远程文件夹工作区**：在远程面板选择目录并点击“打开此文件夹”，文件侧栏会以连接名称显示该远程目录，可像本地文件夹一样展开、浏览和打开文档；关闭文件夹不会断开连接。
+- **远程文件夹工作区**：在远程面板选择目录并点击“打开此文件夹”，文件侧栏会以目录名和连接标签显示该远程目录，可像本地文件夹一样展开、浏览和打开文档；关闭文件夹不会断开连接。
 - **远程搜索**：打开远程文件夹后，可直接在搜索侧栏查找其中的 Markdown 内容，点击结果打开并定位到对应位置。
 - **远程最近记录**：最近打开同时保留远程文件与文件夹，远程文件夹会恢复准确目录；点击会自动重连并打开。
 - **关闭文件夹**：本地与远程文件夹均可一键关闭，回到打开入口。
+- **远程工作区稳定性**：空远程目录不再提供本地新建入口，目录读取失败不会替换当前工作区，最近记录会恢复准确的服务器与目录。
+- **远程另存为**：对远程文档执行“另存为”会保存回服务器，不再悄悄写入本机。
+- **新建远程文件**：在远程工作区新建或另存文件时，会打开内置的远程保存窗口，可浏览服务器目录并输入文件名；保存后文件会出现在文件树与最近列表，本地工作区仍使用 Windows 保存窗口。
+- **远程连接界面**：添加连接时“保存登录凭据”默认勾选；远程保存窗口与连接窗口采用一致的布局与控件样式。
 - **内网使用**：远程连接所需组件随应用提供，可在内网环境中直接使用，无需联网下载额外组件。
 - **全新图标**：采用融合文档与笔尖的「墨页」图标，统一桌面端、移动端与官网的品牌形象。
 
@@ -35,6 +39,10 @@
 - **Remote search**: Search Markdown content inside the open remote folder from the search sidebar, then click a result to open it at the matching position.
 - **Remote recent history**: Recent items include remote files and folders, with remote folders restoring the exact directory; selecting one reconnects automatically and opens it.
 - **Close folder**: Local and remote folders can both be closed to return to the open actions.
+- **Remote workspace reliability**: Empty remote folders no longer expose local create actions, a failed directory read keeps the current workspace, and recent folders restore the exact server and directory.
+- **Remote Save As**: Saving a remote document as a copy writes back to the server instead of silently creating a Windows file.
+- **New remote files**: Creating or saving a copy in a remote workspace now opens an in-app remote save window with directory browsing and a file name; saved files appear in the file tree and recent list, and local workspaces keep the Windows save dialog.
+- **Remote connection dialogs**: "Remember credentials" is enabled by default for new connections, and the remote save window now shares the same layout and controls as the connection window.
 - **Intranet access**: All components required for remote connections are included with the app. No Internet access or additional component downloads are required.
 - **New app icon**: A document and pen nib form the new Inkpage icon, bringing a consistent identity to desktop, mobile and the website.
 
