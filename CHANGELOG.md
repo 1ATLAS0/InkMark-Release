@@ -1,58 +1,34 @@
 # InkMark 更新日志 / Release Notes
 
-## 1.1.0 — 待发布 / Unreleased (Windows / Android)
+## 1.1.0 — 2026-11-12 (Windows / Android)
 
 ### 中文
 
 #### 功能更新
 
-- **远程文档**：Windows 支持通过 SSH 连接 Linux，浏览、打开、编辑并保存远程 Markdown 文档；支持密码与私钥登录，以及连接的添加、编辑和移除。
-- **统一打开入口**：桌面端“打开文件夹”现在同时提供本地文件夹与已保存的远程连接；选择远程连接后会连接并直接进入远程目录。
-- **默认页面**：启动后直接显示最近文档与打开入口，不再自动创建空白文档。
-- **远程文件夹工作区**：在远程面板选择目录并点击“打开此文件夹”，文件侧栏会以目录名和连接标签显示该远程目录，可像本地文件夹一样展开、浏览和打开文档；关闭文件夹不会断开连接。
-- **远程搜索**：打开远程文件夹后，可直接在搜索侧栏查找其中的 Markdown 内容，点击结果打开并定位到对应位置。
-- **远程最近记录**：最近打开同时保留远程文件与文件夹，远程文件夹会恢复准确目录；点击会自动重连并打开。
-- **关闭文件夹**：本地与远程文件夹均可一键关闭，回到打开入口。
-- **远程工作区稳定性**：空远程目录不再提供本地新建入口，目录读取失败不会替换当前工作区，最近记录会恢复准确的服务器与目录。
-- **远程另存为**：对远程文档执行“另存为”会保存回服务器，不再悄悄写入本机。
-- **新建远程文件**：在远程工作区新建或另存文件时，会打开内置的远程保存窗口，可浏览服务器目录并输入文件名；保存后文件会出现在文件树与最近列表，本地工作区仍使用 Windows 保存窗口。
-- **远程连接界面**：添加连接时“保存登录凭据”默认勾选；远程保存窗口与连接窗口采用一致的布局与控件样式。
-- **内网使用**：远程连接所需组件随应用提供，可在内网环境中直接使用，无需联网下载额外组件。
-- **全新图标**：采用融合文档与笔尖的「墨页」图标，统一桌面端、移动端与官网的品牌形象。
+- **远程 Markdown**：Windows 可通过 SSH 连接 Linux，浏览、打开、编辑并保存远程文档，支持密码/私钥登录与内网使用。
+- **远程工作区**：远程目录可像本地文件夹一样浏览、搜索和管理文件，并提供内置远程保存窗口；最近记录会恢复准确目录。
+- **离线编辑**：远程文档栏显示连接状态，离线时可重连或保存本地副本，未保存内容保留。
+- **打开与最近记录**：菜单、Ctrl+O、侧栏和最近页统一提供“本机 / 远程连接”选择；启动后直接显示最近文档。
+- **主题与图标**：新增 InkMark 浅色、深色主题，并启用新的立体插画应用图标。
 
 #### 问题修复
 
-- **保存提示**：连续保存失败时显示最新原因，保存成功后清除过期提示。
-- **标签页切换**：回到之前阅读的标签页时直接停在原位置，不再从第一行闪烁到目标位置。
-- **按钮悬停**：修复部分环境下“打开文件 / 打开文件夹”按钮悬停时背景变白的问题。
-- **最近列表**：切换“全部 / 文件 / 文件夹”时页面顶部保持固定，不再上下跳动。
-- **新建文件按钮**：悬停时文字与背景保持清晰对比，不再变得难以辨认。
+- 修复若干已知问题，提升远程连接、文件操作与界面显示的稳定性。
 
 ### English
 
 #### Feature updates
 
-- **Remote documents**: Connect to Linux over SSH on Windows to browse, open, edit and save Markdown files. Sign in with a password or private key, and add, edit or remove saved connections.
-- **One open-folder entry**: The desktop Open Folder button now offers local folders and saved remote connections; choosing a remote connection connects and opens its directory directly.
-- **Landing page**: Starting InkMark now shows recent documents and open actions instead of creating a blank document automatically.
-- **Remote folder workspace**: Choose a directory in the Remote panel and select Open this folder. The Files sidebar shows that remote directory under its connection name with the same expand, browse and open behaviour as a local folder. Closing the folder does not disconnect.
-- **Remote search**: Search Markdown content inside the open remote folder from the search sidebar, then click a result to open it at the matching position.
-- **Remote recent history**: Recent items include remote files and folders, with remote folders restoring the exact directory; selecting one reconnects automatically and opens it.
-- **Close folder**: Local and remote folders can both be closed to return to the open actions.
-- **Remote workspace reliability**: Empty remote folders no longer expose local create actions, a failed directory read keeps the current workspace, and recent folders restore the exact server and directory.
-- **Remote Save As**: Saving a remote document as a copy writes back to the server instead of silently creating a Windows file.
-- **New remote files**: Creating or saving a copy in a remote workspace now opens an in-app remote save window with directory browsing and a file name; saved files appear in the file tree and recent list, and local workspaces keep the Windows save dialog.
-- **Remote connection dialogs**: "Remember credentials" is enabled by default for new connections, and the remote save window now shares the same layout and controls as the connection window.
-- **Intranet access**: All components required for remote connections are included with the app. No Internet access or additional component downloads are required.
-- **New app icon**: A document and pen nib form the new Inkpage icon, bringing a consistent identity to desktop, mobile and the website.
+- **Remote Markdown**: Connect to Linux over SSH on Windows to browse, open, edit and save documents, with password/private-key sign-in and intranet use.
+- **Remote workspace**: Browse, search and manage remote folders like local ones, with an in-app remote save window and accurate recent-folder restore.
+- **Offline editing**: The remote document bar shows connection status and offers reconnect or a local copy while offline, preserving unsaved edits.
+- **Open and recents**: The File menu, Ctrl+O, sidebar and recent page share one local/remote chooser; InkMark opens on recent documents.
+- **Themes and icon**: New InkMark Light and Dark themes, plus a new dimensional illustration app icon.
 
 #### Bug fixes
 
-- **Save feedback**: Show the latest cause when consecutive saves fail, and clear outdated errors after a successful save.
-- **Tab switching**: Returning to a tab now lands at the previous reading position instead of flashing there from the first line.
-- **Button hover**: Fixed the Open File / Open Folder buttons turning white on hover in some environments.
-- **Recent list**: The top of the landing page stays fixed when switching between All, Files and Folders, so the buttons no longer jump.
-- **New File button**: Text and background keep clear contrast on hover.
+- Fixed a number of known issues to improve the stability of remote connections, file operations and the interface.
 
 ## 1.0.0 — 2026-10-27 (Windows / Android)
 
@@ -76,13 +52,7 @@ InkMark 是一款面向 Windows 与 Android 的 Markdown 编辑器，专注于�
 
 #### 问题修复
 
-- **公式兼容**：改进反斜杠公式的识别与保存，修复 Android 部分公式预览与导出不一致，以及公式设置重启后未能保留的问题。
-- **大纲滚动**：长标题可横向滚动查看，调整侧栏宽度后仍能访问完整内容。
-- **阅读位置**：调整侧栏宽度或使用 Ctrl + 鼠标滚轮缩放时，保持当前阅读位置，减少内容跳动。
-- **主题辨识**：提高表格边框与侧栏次要文字的对比度，主题卡片可显示完整名称。
-- **侧栏布局**：改进窄侧栏中的按钮与筛选项排列，减少拥挤和内容溢出。
-- **更新体验**：下载提示不再遮挡编辑区域；改进更新检查失败时的重试与备用连接处理。
-- **任务栏分组**：Windows 下使用独立的任务栏分组，便于识别和切换 InkMark 窗口。
+- 修复若干已知问题，提升编辑、界面与更新体验的稳定性。
 
 欢迎使用 InkMark 1.0。后续版本将继续围绕性能、稳定性与易用性改进。
 
@@ -108,13 +78,7 @@ InkMark is a Markdown editor for Windows and Android, with a focus on performanc
 
 #### Bug fixes
 
-- **Math compatibility**: Improved recognition and preservation of backslash-delimited formulas. Fixed inconsistent formula rendering between Android preview and export, and a math preference that was not retained after restarting.
-- **Outline scrolling**: Long headings can be read by scrolling horizontally, and remain fully accessible after resizing the sidebar.
-- **Reading position**: Resizing the sidebar or zooming with Ctrl + mouse wheel preserves the current reading position and reduces unexpected movement.
-- **Theme readability**: Improved contrast for table borders and secondary sidebar text. Theme cards can now show their full names.
-- **Sidebar layout**: Improved button and filter layouts in narrow sidebars to reduce crowding and overflow.
-- **Update experience**: Download notifications no longer obscure the editor. Improved retries and fallback connections when update checks fail.
-- **Taskbar grouping**: InkMark windows use their own taskbar group on Windows for easier identification and switching.
+- Fixed a number of known issues to improve the stability of editing, the interface and updates.
 
 Welcome to InkMark 1.0. Future releases will continue to improve performance, stability and usability.
 
