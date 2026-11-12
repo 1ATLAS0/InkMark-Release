@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T02:49:14.665Z",
+  "generatedAt": "2026-11-12T06:49:49.380Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -9,17 +9,17 @@
     "allReleasesApiUrl": "https://api.github.com/repos/1ATLAS0/InkMark-Release/releases"
   },
   "latest": {
-    "version": "1.1.0",
-    "tag": "v1.1.0",
+    "version": "1.1.1",
+    "tag": "v1.1.1",
     "releaseDate": "2026-11-12",
-    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v1.1.0",
+    "releaseUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/tag/v1.1.1",
     "assets": [
       {
-        "name": "inkmark-win-x64-1.1.0-setup.exe",
-        "size": 129605172,
+        "name": "inkmark-win-x64-1.1.1-setup.exe",
+        "size": 129604832,
         "sizeFormatted": "123.60 MB",
-        "sha256": "05b8e12ecad6d50bb0959178856c52553d28b42f2ee517fbdc7de85108b4d9b3",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.0/inkmark-win-x64-1.1.0-setup.exe",
+        "sha256": "bc1ae5f22491ba248706f01b67f6e802fdec42a13b2a268d5adcf22cd4b469df",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.1/inkmark-win-x64-1.1.1-setup.exe",
         "id": "win-setup",
         "order": 10,
         "platform": "windows",
@@ -31,11 +31,11 @@
         "descEn": "Includes file associations and auto-update"
       },
       {
-        "name": "inkmark-win-x64-1.1.0.zip",
-        "size": 178142315,
+        "name": "inkmark-win-x64-1.1.1.zip",
+        "size": 178144090,
         "sizeFormatted": "169.89 MB",
-        "sha256": "aee0be26cb060f11833d5c965f0064cc5ef6a0a8dac5f8b05283a7f05c388222",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.0/inkmark-win-x64-1.1.0.zip",
+        "sha256": "58d4a372fb2bcfc4150a7bcb18b048a1af46f24d9b47c3f2109444e1e995bc30",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.1/inkmark-win-x64-1.1.1.zip",
         "id": "win-zip",
         "order": 20,
         "platform": "windows",
@@ -47,11 +47,11 @@
         "descEn": "Extract and run anywhere"
       },
       {
-        "name": "InkMark-v1.1.0-android.apk",
-        "size": 8989019,
+        "name": "InkMark-v1.1.1-android.apk",
+        "size": 8988931,
         "sizeFormatted": "8.57 MB",
-        "sha256": "0a465153ff2ea2bfc25de8e32fde327ef1f0fa7226dcd8ad633080687bfdb0ae",
-        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.0/InkMark-v1.1.0-android.apk",
+        "sha256": "31e398cdc9da553b6953010f7b26dafb641fc78222ec8fde932fd61bcca4f271",
+        "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.1/InkMark-v1.1.1-android.apk",
         "id": "android-release",
         "order": 30,
         "platform": "android",
@@ -63,8 +63,8 @@
         "descEn": "For Android phones and tablets"
       }
     ],
-    "releaseNotesMd": "# InkMark 1.1.0\n\n## 中文\n\n### 功能更新\n\n- **远程 Markdown**：Windows 可通过 SSH 连接 Linux，浏览、打开、编辑并保存远程文档。\n- **远程工作区**：远程目录可像本地文件夹一样浏览、搜索和管理文件，并提供内置远程保存窗口。\n- **打开与最近记录**：菜单、Ctrl+O、侧栏和最近页统一提供“本机 / 远程连接”选择。\n- **主题**：新增 InkMark 浅色、深色主题。\n\n### 问题修复\n\n- 修复若干已知问题，提升远程连接、文件操作与界面显示的稳定性。\n\n## English\n\n### Feature updates\n\n- **Remote Markdown**: Connect to Linux over SSH on Windows to browse, open, edit and save documents.\n- **Remote workspace**: Browse, search and manage remote folders like local ones, with an in-app remote save window.\n- **Open and recents**: The File menu, Ctrl+O, sidebar and recent page share one local/remote chooser.\n- **Themes**: New InkMark Light and Dark themes.\n\n### Bug fixes\n\n- Fixed a number of known issues to improve the stability of remote connections, file operations and the interface.\n",
-    "sha256SumsRaw": "05b8e12ecad6d50bb0959178856c52553d28b42f2ee517fbdc7de85108b4d9b3  inkmark-win-x64-1.1.0-setup.exe\naee0be26cb060f11833d5c965f0064cc5ef6a0a8dac5f8b05283a7f05c388222  inkmark-win-x64-1.1.0.zip\n0a465153ff2ea2bfc25de8e32fde327ef1f0fa7226dcd8ad633080687bfdb0ae  InkMark-v1.1.0-android.apk"
+    "releaseNotesMd": "# InkMark 1.1.1\n\n## 中文\n\n### 功能更新\n\n- **主题优化**：InkMark 浅色、深色主题重新调整配色，正文、标题、引用、行内代码、代码块与表格显示更统一。\n\n### 问题修复\n\n- 修复若干已知问题，提升主题切换、窗口按钮显示与最近记录的准确性。\n\n## English\n\n### Feature updates\n\n- **Theme refinements**: Refined the InkMark Light and Dark palettes for more consistent body text, headings, quotes, inline code, code blocks and tables.\n\n### Bug fixes\n\n- Fixed a number of known issues affecting theme switching, window controls and recent-file accuracy.\n",
+    "sha256SumsRaw": "bc1ae5f22491ba248706f01b67f6e802fdec42a13b2a268d5adcf22cd4b469df  inkmark-win-x64-1.1.1-setup.exe\n58d4a372fb2bcfc4150a7bcb18b048a1af46f24d9b47c3f2109444e1e995bc30  inkmark-win-x64-1.1.1.zip\n31e398cdc9da553b6953010f7b26dafb641fc78222ec8fde932fd61bcca4f271  InkMark-v1.1.1-android.apk"
   },
   "benchmarks": {
     "scaleFixtures": [
@@ -95,6 +95,16 @@
     ]
   },
   "changelog": [
+    {
+      "version": "1.1.1",
+      "tag": "v1.1.1",
+      "date": "2026-11-12",
+      "platforms": "Windows / Android",
+      "heading": "1.1.1 — 2026-11-12 (Windows / Android)",
+      "zh": "#### 功能更新\r\n\r\n- **主题优化**：InkMark 浅色、深色主题重新调整配色，正文、标题、引用、行内代码、代码块与表格显示更统一。\r\n\r\n#### 问题修复\r\n\r\n- 修复若干已知问题，提升主题切换、窗口按钮显示与最近记录的准确性。",
+      "en": "#### Feature updates\r\n\r\n- **Theme refinements**: Refined the InkMark Light and Dark palettes for more consistent body text, headings, quotes, inline code, code blocks and tables.\r\n\r\n#### Bug fixes\r\n\r\n- Fixed a number of known issues affecting theme switching, window controls and recent-file accuracy.",
+      "raw": "### 中文\r\n\r\n#### 功能更新\r\n\r\n- **主题优化**：InkMark 浅色、深色主题重新调整配色，正文、标题、引用、行内代码、代码块与表格显示更统一。\r\n\r\n#### 问题修复\r\n\r\n- 修复若干已知问题，提升主题切换、窗口按钮显示与最近记录的准确性。\r\n\r\n### English\r\n\r\n#### Feature updates\r\n\r\n- **Theme refinements**: Refined the InkMark Light and Dark palettes for more consistent body text, headings, quotes, inline code, code blocks and tables.\r\n\r\n#### Bug fixes\r\n\r\n- Fixed a number of known issues affecting theme switching, window controls and recent-file accuracy."
+    },
     {
       "version": "1.1.0",
       "tag": "v1.1.0",

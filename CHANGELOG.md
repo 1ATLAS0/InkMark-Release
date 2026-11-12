@@ -1,5 +1,27 @@
 # InkMark 更新日志 / Release Notes
 
+## 1.1.1 — 2026-11-12 (Windows / Android)
+
+### 中文
+
+#### 功能更新
+
+- **主题优化**：InkMark 浅色、深色主题重新调整配色，正文、标题、引用、行内代码、代码块与表格显示更统一。
+
+#### 问题修复
+
+- 修复若干已知问题，提升主题切换、窗口按钮显示与最近记录的准确性。
+
+### English
+
+#### Feature updates
+
+- **Theme refinements**: Refined the InkMark Light and Dark palettes for more consistent body text, headings, quotes, inline code, code blocks and tables.
+
+#### Bug fixes
+
+- Fixed a number of known issues affecting theme switching, window controls and recent-file accuracy.
+
 ## 1.1.0 — 2026-11-12 (Windows / Android)
 
 ### 中文
