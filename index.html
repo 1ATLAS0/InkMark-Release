@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,7 +44,7 @@
 
       <div class="nav-actions">
         <button type="button" id="lang-toggle-btn" class="icon-btn">EN</button>
-        <button type="button" id="theme-toggle-btn" class="icon-btn">☀️ 浅色</button>
+        <button type="button" id="theme-toggle-btn" class="icon-btn">🌙 深色</button>
         <a href="https://github.com/1ATLAS0/InkMark-Release" data-brand-link="repo" target="_blank" rel="noopener" class="icon-btn github-btn" aria-label="GitHub">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -174,13 +174,13 @@
 
           <div id="mock-theme-picker" class="showcase-theme-picker">
             <span class="theme-picker-label" data-i18n="themeLabel">主题</span>
-            <button type="button" class="theme-swatch-btn active" data-theme-id="inkmark-dark">
-              <span class="swatch-dot" style="background:#0b101b;border-color:#2dd4bf;"></span>
-              <span>InkMark Dark</span>
-            </button>
-            <button type="button" class="theme-swatch-btn" data-theme-id="inkmark-light">
-              <span class="swatch-dot" style="background:#f4f7fb;border-color:#1e6f7a;"></span>
+            <button type="button" class="theme-swatch-btn active" data-theme-id="inkmark-light">
+              <span class="swatch-dot" style="background:#f5f7fc;border-color:#485990;"></span>
               <span>InkMark Light</span>
+            </button>
+            <button type="button" class="theme-swatch-btn" data-theme-id="inkmark-dark">
+              <span class="swatch-dot" style="background:#151b2e;border-color:#8a9df5;"></span>
+              <span>InkMark Dark</span>
             </button>
             <button type="button" class="theme-swatch-btn" data-theme-id="github-light">
               <span class="swatch-dot" style="background:#ffffff;border-color:#0969da;"></span>
@@ -202,7 +202,7 @@
         </div>
 
         <!-- Interactive Mockup Stage -->
-        <div id="mockup-stage" class="mockup-stage" data-mock-theme="inkmark-dark">
+        <div id="mockup-stage" class="mockup-stage" data-mock-theme="inkmark-light">
           <!-- 1. Desktop Mockup (Matches real InkMark Desktop UI) -->
           <div id="mock-view-desktop" class="mock-desktop-window">
             <div class="mock-menubar">
@@ -633,7 +633,7 @@
             <p data-i18n="extExportDesc">支持导出为 PDF 与独立 HTML 文件，保留当前主题样式并支持宽表格跨页排版。</p>
             <div class="ext-mini">
               <div class="ext-mini-badges">
-                <span class="ext-mini-badge" style="color:var(--accent-teal);border-color:rgba(45,212,191,0.4);">PDF</span>
+                <span class="ext-mini-badge" style="color:var(--accent-teal);border-color:var(--border-strong);">PDF</span>
                 <span class="ext-mini-badge">HTML</span>
                 <span class="ext-mini-badge">.md</span>
               </div>
@@ -683,30 +683,30 @@
 
           <div>
             <div class="swatch-grid">
-              <div class="swatch-card active" data-swatch-theme="inkmark-dark" data-swatch-label="InkMark Dark">
-                <div class="swatch-pv" style="background:#0b101b;color:#f1f5f9;">
-                  <div class="swatch-pv-tag" style="color:#2dd4bf;">InkMark Dark</div>
-                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
-                </div>
-                <div class="swatch-meta">
-                  <span>InkMark Dark</span>
-                  <div class="swatch-dots">
-                    <i style="background:#0b101b;border:1px solid #334155;"></i>
-                    <i style="background:#2dd4bf;"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swatch-card" data-swatch-theme="inkmark-light" data-swatch-label="InkMark Light">
-                <div class="swatch-pv" style="background:#f4f7fb;color:#0f172a;">
-                  <div class="swatch-pv-tag" style="color:#1e6f7a;">InkMark Light</div>
+              <div class="swatch-card active" data-swatch-theme="inkmark-light" data-swatch-label="InkMark Light">
+                <div class="swatch-pv" style="background:#f5f7fc;color:#1e2640;">
+                  <div class="swatch-pv-tag" style="color:#485990;">InkMark Light</div>
                   <div class="swatch-sample-lines" data-role="swatch-sample"></div>
                 </div>
                 <div class="swatch-meta">
                   <span>InkMark Light</span>
                   <div class="swatch-dots">
-                    <i style="background:#f4f7fb;border:1px solid #cbd5e1;"></i>
-                    <i style="background:#1e6f7a;"></i>
+                    <i style="background:#f5f7fc;border:1px solid #c5d0ea;"></i>
+                    <i style="background:#485990;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-swatch-theme="inkmark-dark" data-swatch-label="InkMark Dark">
+                <div class="swatch-pv" style="background:#151b2e;color:#eef1fb;">
+                  <div class="swatch-pv-tag" style="color:#8a9df5;">InkMark Dark</div>
+                  <div class="swatch-sample-lines" data-role="swatch-sample"></div>
+                </div>
+                <div class="swatch-meta">
+                  <span>InkMark Dark</span>
+                  <div class="swatch-dots">
+                    <i style="background:#151b2e;border:1px solid #354269;"></i>
+                    <i style="background:#8a9df5;"></i>
                   </div>
                 </div>
               </div>

@@ -16,7 +16,7 @@
       const saved = localStorage.getItem('inkmark-site-theme');
       if (saved === 'light' || saved === 'dark') return saved;
     } catch {}
-    return 'dark';
+    return 'light';
   }
 
   function detectOS() {
@@ -289,7 +289,7 @@
         'guide.md': [
           '# 快速上手指南',
           '## 本地文档与工作区\n无需注册账号，直接打开本地文件夹即可通过左侧文件树、全文搜索与 `最近使用` 面板管理全部笔记。',
-          '## 常用清单\n- [x] 支持 `Ctrl + 滚轮` 缩放并保持当前阅读位置\n- [x] 内置 39 款浅色与深色主题实时切换\n- [ ] 试试点击任意段落直接输入新的 Markdown 内容'
+          '## 常用清单\n- [x] 支持 `Ctrl + 滚轮` 缩放并保持当前阅读位置\n- [x] 内置 41 款浅色与深色主题实时切换\n- [ ] 试试点击任意段落直接输入新的 Markdown 内容'
         ]
       },
       mobile: [
@@ -309,7 +309,7 @@
         'guide.md': [
           '# Quick Start Guide',
           '## Local Files & Workspace\nEdit local Markdown files directly without an account. Browse folders, search across files, and filter `Recent` items in the sidebar.',
-          '## Everyday Checklist\n- [x] `Ctrl + Wheel` zoom preserves your reading position\n- [x] 39 built-in light and dark themes with instant switching\n- [ ] Click any paragraph here to type your own Markdown'
+          '## Everyday Checklist\n- [x] `Ctrl + Wheel` zoom preserves your reading position\n- [x] 41 built-in light and dark themes with instant switching\n- [ ] Click any paragraph here to type your own Markdown'
         ]
       },
       mobile: [
@@ -1149,31 +1149,13 @@
     initDocStore(true);
     renderAllText();
 
-    const themeBtn = document.getElementById('theme-toggle-btn');
-    if (themeBtn) {
-      themeBtn.addEventListener('click', () => {
-        state.theme = state.theme === 'dark' ? 'light' : 'dark';
-        applyTheme();
-      });
-    }
-
-    const langBtn = document.getElementById('lang-toggle-btn');
-    if (langBtn) {
-      langBtn.addEventListener('click', () => {
-        state.lang = state.lang === 'zh' ? 'en' : 'zh';
-        try {
-          localStorage.setItem('inkmark-site-lang', state.lang);
-        } catch {}
-        renderAllText();
-      });
-    }
-
     const stageEl = document.getElementById('mockup-stage');
     const themePickerEl = document.getElementById('mock-theme-picker');
     const sidebarEl = document.getElementById('mock-sidebar');
-    let lockedMockTheme = 'inkmark-dark';
+    let lockedMockTheme = state.theme === 'light' ? 'inkmark-light' : 'inkmark-dark';
 
     const THEME_NAMES = {
+      'inkmark-light': 'InkMark Light',
       'inkmark-dark': 'InkMark Dark',
       'github-light': 'GitHub Light',
       'one-light': 'One Light',
@@ -1203,6 +1185,28 @@
           stageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
+    }
+
+    commitMockTheme(lockedMockTheme, false);
+
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        state.theme = state.theme === 'dark' ? 'light' : 'dark';
+        applyTheme();
+        commitMockTheme(state.theme === 'light' ? 'inkmark-light' : 'inkmark-dark', false);
+      });
+    }
+
+    const langBtn = document.getElementById('lang-toggle-btn');
+    if (langBtn) {
+      langBtn.addEventListener('click', () => {
+        state.lang = state.lang === 'zh' ? 'en' : 'zh';
+        try {
+          localStorage.setItem('inkmark-site-lang', state.lang);
+        } catch {}
+        renderAllText();
+      });
     }
 
     // Mode switching (Desktop / Android / PDF)

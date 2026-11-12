@@ -1,5 +1,5 @@
 window.__INKMARK_RELEASE_DATA__ = {
-  "generatedAt": "2026-11-12T02:05:52.081Z",
+  "generatedAt": "2026-11-12T02:49:14.665Z",
   "brand": {
     "name": "InkMark",
     "repo": "1ATLAS0/InkMark-Release",
@@ -16,9 +16,9 @@ window.__INKMARK_RELEASE_DATA__ = {
     "assets": [
       {
         "name": "inkmark-win-x64-1.1.0-setup.exe",
-        "size": 129599632,
+        "size": 129605172,
         "sizeFormatted": "123.60 MB",
-        "sha256": "f32255f01c40f81d8dd2778d30ca904a24e3e5049bee6a0295ad06cfb7d50a4f",
+        "sha256": "05b8e12ecad6d50bb0959178856c52553d28b42f2ee517fbdc7de85108b4d9b3",
         "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.0/inkmark-win-x64-1.1.0-setup.exe",
         "id": "win-setup",
         "order": 10,
@@ -32,9 +32,9 @@ window.__INKMARK_RELEASE_DATA__ = {
       },
       {
         "name": "inkmark-win-x64-1.1.0.zip",
-        "size": 178142419,
+        "size": 178142315,
         "sizeFormatted": "169.89 MB",
-        "sha256": "b9d8d53d98f25e4244553d627155099ca6ea7b69a447fd809e0bd527bb7a6d6d",
+        "sha256": "aee0be26cb060f11833d5c965f0064cc5ef6a0a8dac5f8b05283a7f05c388222",
         "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.0/inkmark-win-x64-1.1.0.zip",
         "id": "win-zip",
         "order": 20,
@@ -48,9 +48,9 @@ window.__INKMARK_RELEASE_DATA__ = {
       },
       {
         "name": "InkMark-v1.1.0-android.apk",
-        "size": 8988847,
+        "size": 8989019,
         "sizeFormatted": "8.57 MB",
-        "sha256": "768f42b9419a33d4fa50e487c0e69a115c44452f2fc5ff2738ff9beb38beb007",
+        "sha256": "0a465153ff2ea2bfc25de8e32fde327ef1f0fa7226dcd8ad633080687bfdb0ae",
         "downloadUrl": "https://github.com/1ATLAS0/InkMark-Release/releases/download/v1.1.0/InkMark-v1.1.0-android.apk",
         "id": "android-release",
         "order": 30,
@@ -64,7 +64,7 @@ window.__INKMARK_RELEASE_DATA__ = {
       }
     ],
     "releaseNotesMd": "# InkMark 1.1.0\n\n## 中文\n\n### 功能更新\n\n- **远程 Markdown**：Windows 可通过 SSH 连接 Linux，浏览、打开、编辑并保存远程文档。\n- **远程工作区**：远程目录可像本地文件夹一样浏览、搜索和管理文件，并提供内置远程保存窗口。\n- **打开与最近记录**：菜单、Ctrl+O、侧栏和最近页统一提供“本机 / 远程连接”选择。\n- **主题**：新增 InkMark 浅色、深色主题。\n\n### 问题修复\n\n- 修复若干已知问题，提升远程连接、文件操作与界面显示的稳定性。\n\n## English\n\n### Feature updates\n\n- **Remote Markdown**: Connect to Linux over SSH on Windows to browse, open, edit and save documents.\n- **Remote workspace**: Browse, search and manage remote folders like local ones, with an in-app remote save window.\n- **Open and recents**: The File menu, Ctrl+O, sidebar and recent page share one local/remote chooser.\n- **Themes**: New InkMark Light and Dark themes.\n\n### Bug fixes\n\n- Fixed a number of known issues to improve the stability of remote connections, file operations and the interface.\n",
-    "sha256SumsRaw": "f32255f01c40f81d8dd2778d30ca904a24e3e5049bee6a0295ad06cfb7d50a4f  inkmark-win-x64-1.1.0-setup.exe\nb9d8d53d98f25e4244553d627155099ca6ea7b69a447fd809e0bd527bb7a6d6d  inkmark-win-x64-1.1.0.zip\n768f42b9419a33d4fa50e487c0e69a115c44452f2fc5ff2738ff9beb38beb007  InkMark-v1.1.0-android.apk"
+    "sha256SumsRaw": "05b8e12ecad6d50bb0959178856c52553d28b42f2ee517fbdc7de85108b4d9b3  inkmark-win-x64-1.1.0-setup.exe\naee0be26cb060f11833d5c965f0064cc5ef6a0a8dac5f8b05283a7f05c388222  inkmark-win-x64-1.1.0.zip\n0a465153ff2ea2bfc25de8e32fde327ef1f0fa7226dcd8ad633080687bfdb0ae  InkMark-v1.1.0-android.apk"
   },
   "benchmarks": {
     "scaleFixtures": [
