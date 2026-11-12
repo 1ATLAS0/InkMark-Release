@@ -6,11 +6,10 @@
 
 #### 功能更新
 
-- **远程 Markdown**：Windows 可通过 SSH 连接 Linux，浏览、打开、编辑并保存远程文档，支持密码/私钥登录与内网使用。
-- **远程工作区**：远程目录可像本地文件夹一样浏览、搜索和管理文件，并提供内置远程保存窗口；最近记录会恢复准确目录。
-- **离线编辑**：远程文档栏显示连接状态，离线时可重连或保存本地副本，未保存内容保留。
-- **打开与最近记录**：菜单、Ctrl+O、侧栏和最近页统一提供“本机 / 远程连接”选择；启动后直接显示最近文档。
-- **主题与图标**：新增 InkMark 浅色、深色主题，并启用新的立体插画应用图标。
+- **远程 Markdown**：Windows 可通过 SSH 连接 Linux，浏览、打开、编辑并保存远程文档。
+- **远程工作区**：远程目录可像本地文件夹一样浏览、搜索和管理文件，并提供内置远程保存窗口。
+- **打开与最近记录**：菜单、Ctrl+O、侧栏和最近页统一提供“本机 / 远程连接”选择。
+- **主题**：新增 InkMark 浅色、深色主题。
 
 #### 问题修复
 
@@ -20,11 +19,10 @@
 
 #### Feature updates
 
-- **Remote Markdown**: Connect to Linux over SSH on Windows to browse, open, edit and save documents, with password/private-key sign-in and intranet use.
-- **Remote workspace**: Browse, search and manage remote folders like local ones, with an in-app remote save window and accurate recent-folder restore.
-- **Offline editing**: The remote document bar shows connection status and offers reconnect or a local copy while offline, preserving unsaved edits.
-- **Open and recents**: The File menu, Ctrl+O, sidebar and recent page share one local/remote chooser; InkMark opens on recent documents.
-- **Themes and icon**: New InkMark Light and Dark themes, plus a new dimensional illustration app icon.
+- **Remote Markdown**: Connect to Linux over SSH on Windows to browse, open, edit and save documents.
+- **Remote workspace**: Browse, search and manage remote folders like local ones, with an in-app remote save window.
+- **Open and recents**: The File menu, Ctrl+O, sidebar and recent page share one local/remote chooser.
+- **Themes**: New InkMark Light and Dark themes.
 
 #### Bug fixes
 
