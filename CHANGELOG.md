@@ -1,5 +1,31 @@
 # InkMark 更新日志 / Release Notes
 
+## 1.1.2 — 2026-11-24 (Windows / Android)
+
+### 中文
+
+#### 功能更新
+
+- **HTML 标记显示**：实时预览中行内 HTML 标记默认隐藏，聚焦或悬停时显示，并新增“始终显示 HTML 标记”开关。
+- **主题引导**：桌面端首次启动时提供主题选择引导，可即时预览并切换浅色或深色风格。
+
+#### 问题修复
+
+- 修复撤销和反撤销视图定位异常的问题。
+- 修复行内时间文本颜色错误、Android 系统栏配色同步等若干已知问题。
+
+### English
+
+#### Feature updates
+
+- **HTML markers**: Inline HTML tags are hidden by default in live preview, appear on focus or hover, and can be kept visible with the new "Always Show HTML Markers" option.
+- **Theme onboarding**: Desktop shows a theme picker on first launch with live preview.
+
+#### Bug fixes
+
+- Fixed undo and redo view positioning issues.
+- Fixed incorrect color on inline timestamps, Android system bar theme sync, and other known issues.
+
 ## 1.1.1 — 2026-11-12 (Windows / Android)
 
 ### 中文
